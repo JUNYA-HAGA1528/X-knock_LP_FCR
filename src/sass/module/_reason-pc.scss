@@ -1,0 +1,107 @@
+@use "global" as *;
+
+.reason-pc{
+    text-align: left;
+}
+
+.reason-pc__inner{
+    max-width: rem(889);
+    margin: 0 auto;
+    padding: 0 rem(25);
+}
+
+.reason-pc__item{
+    display: flex;
+    gap: 0 rem(50);
+}
+
+.reason-pc__item + .reason-pc__item {
+    margin-top: rem(80);
+}
+
+.reason-pc__left{
+    width: 43.62%;
+}
+
+.reason-pc__right{
+    width: 50.41%;
+}
+
+.reason-pc__img img {
+    aspect-ratio:423/316 ;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.reason-pc__number{
+    width: rem(161);
+    height: rem(116);
+}
+
+
+.reason-pc__text{
+    color: #444;
+    margin-top: rem(27.94);
+    font-size: rem(16);
+    font-weight: $medium;
+    line-height: calc(28/16);
+}
+
+
+.reason-pc__right--first{
+    position: relative;
+}
+
+.reason-pc__icon-first{
+    position: absolute;
+    top: 40%;
+    left: -5%;
+    width: rem(133);
+    height: rem(133);
+}
+
+
+.reason-pc__right--second{
+    position: relative;
+}
+
+.reason-pc__right--second::before{
+    background-image: url('../images/common/reason-pc-icon2.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    content: "";
+    top: rem(196);
+    left: calc(50% - min(58%, rem(800)));
+    width: rem(483);
+    height: rem(263);
+    z-index: 1;
+}
+
+
+.reason-pc__right--third{
+    position: relative;
+}
+
+.reason-pc__icon-third{
+    position: absolute;
+    top: 60%;
+    right: 3%;
+    width: rem(313);
+    height: rem(184);
+}
+
+
+.reason-pc__right--five{
+    position: relative;
+}
+
+.reason-pc__icon-five{
+    position: absolute;
+    top: 52%;
+    left: -5%;
+    width: rem(133);
+    height: rem(133);
+}

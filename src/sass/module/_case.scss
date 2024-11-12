@@ -7,9 +7,25 @@
     background-size: cover;
     text-align: center;
     padding: rem(60) 0 rem(120);
+    position: relative;
+    z-index: 2;
     @include mq(md) {
         background-image: url('../images/common/case-bg.webp');
         padding: rem(37.44) 0 rem(85.42);
+    }
+}
+
+.case__bubble{
+    position: absolute;
+    bottom: -3.9%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: rem(341);
+    height: rem(157);
+    @include mq(md) {
+        bottom: -15.3%;
+        width: rem(497);
+        height: rem(182);
     }
 }
 

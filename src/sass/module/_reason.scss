@@ -1,0 +1,139 @@
+@use "global" as *;
+
+.reason{
+    padding: rem(80) 0 rem(78);
+    @include mq(md) {
+        padding: rem(80) 0 rem(100);
+        background-image: url('../images/common/reason-pc-bg.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.reason__matter{
+    position: relative;
+    background-color: #144F93;
+    width: rem(320);
+    height: rem(43);
+    margin: 0 auto;
+    border-radius: rem(43.21);
+    @include mq(md) {
+        width: rem(533);
+        height: rem(67);
+        border-radius: rem(67.73);
+    }
+}
+
+.reason__matter-icon{
+    position: absolute;
+    top: -140%;
+    right: 5%;    
+    width: rem(45);
+    height: rem(100);
+    @include mq(md) {
+        top: -135%;
+        right: 5%;    
+        width: rem(68);
+        height: rem(150);
+    }
+}
+
+.reason__matter-text{
+    color: $white;
+    font-size: rem(18);
+    font-weight: 900;
+    letter-spacing: 0.09em;
+    @include mq(md) {
+        font-size: rem(29.2);
+        letter-spacing: 0.29em;
+    }
+}
+
+.reason__matter-text span {
+    font-family: $second-font;
+    color: #F3F02F;
+    font-size: rem(32);
+    font-weight: $bold;
+    letter-spacing: -0.01em;
+    @include mq(md) {
+        font-size: rem(48);
+    }
+}
+
+
+
+.reason__head{
+    margin-top: rem(38);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 rem(7.89);
+    @include mq(md) {
+        margin-top: rem(40);
+        gap: 0 rem(9.06);
+    }
+}
+
+.reason__slash{
+    margin-top: rem(12);
+    width: rem(12);
+    @include mq(md) {
+        margin-top: rem(20);
+        width: rem(20);
+    }
+}
+
+.reason__title{
+    color: #00C6FF;
+    font-size: rem(24);
+    font-weight: 900;
+    line-height: 1.1;
+    @include mq(md) {
+        font-size: rem(36);
+    }
+}
+
+.reason__title-first{
+    color: #0191FF;
+    font-size: rem(32);
+    @include mq(md) {
+        font-size: rem(48);
+    }
+}
+
+.reason__title-second{
+    font-family: $second-font;
+    color: #144F93;
+    font-size: rem(48);
+    font-weight: $bold;
+    @include mq(md) {
+        font-size: rem(72);
+    }
+}
+
+.reason__title-third{
+    color: #144F93;
+    font-size: rem(32);
+    font-weight: 900;
+    @include mq(md) {
+        font-size: rem(48);
+    }
+}
+
+.reason__container{
+    margin-top: rem(55);
+    @include mq(md) {
+        margin-top: rem(80);
+    }
+}
+
+
+
+
+
+
+
+
+
+
