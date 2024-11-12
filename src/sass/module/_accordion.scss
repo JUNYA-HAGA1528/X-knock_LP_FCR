@@ -4,112 +4,111 @@
     text-align: left;
 }
 
-.accordion__item{
-    max-width: rem(583);
-    margin: 0 auto;
-}
-
 .accordion__item + .accordion__item{
-    margin-top: rem(24);
-    @include mq(md) {
-        margin-top: rem(20);
-    }
+    margin-top: rem(15);
 }
 
 .accordion__header {
+    border-radius: rem(3);
+    background-color: $white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    color: #5e5e5e;
     cursor: pointer;
-    padding: rem(0) rem(0) rem(16);
+    padding:rem(18) rem(20);
     font-size: rem(16);
     font-weight: bold;
     @include mq(md) {
-        padding: rem(0) ;
+        padding:rem(30) rem(45);
     }
 }
 
-.accordion__item.active .accordion__header {
-    border-radius: rem(27) rem(27) 0 0; /* 上部の border-radius だけ適用 */
-}
-
-.accordion__item.active .accordion__content {
-    border-radius: 0 0 rem(27) rem(27); /* 下部の border-radius を適用 */
-}
-
-.accordion__item .accordion__header {
-    border-radius: rem(27); /* アコーディオンが閉じたときに全体に適用 */
-}
 
 .accordion__textBox{
     display: flex;
-    align-items:center;
-    gap: 0 rem(10);
+    align-items: flex-start;
+    gap: 0 rem(7);
     @include mq(md) {
-        gap: 0 rem(20);
+        gap: 0 rem(7.44);
+        align-items:center;
+    }
+}
+
+.accordion__textBox--start{
+    align-items: flex-start;
+    gap: 0 rem(9);
+    @include mq(md) {
+        align-items: flex-start;
+        gap: 0 rem(10);
     }
 }
 
 .accordion__head{
-    background-color: #fff;
-    border-radius: 50%;
-    padding: rem(10) rem(12);
-    font-size: rem(20);
-    font-weight: $medium;
+    display: inline-block; /* グラデーションが適用されやすくするため */
+    background: linear-gradient(90deg, #3ACADD 0%, #5A88E5 100%);
+    -webkit-background-clip: text;
+    background-clip: text; /* 一部のブラウザで必要 */
+    -webkit-text-fill-color: transparent;
+    color: transparent; /* 他のブラウザでもテキストの透明化を確実にするため */
+    
+    font-size: rem(20); /* SASSのrem関数を通常のCSSで置き換え */
+    font-weight: $medium; /* 変数$mediumが正しく設定されていることを確認 */
     line-height: 1;
-    letter-spacing: 0.04em;
     @include mq(md) {
-        padding: rem(6) rem(12) rem(14);
-        font-size: rem(30);
+        font-size: rem(27);
     }
 }
 
+.accordion__head--color {
+    background: none; /* グラデーションを解除 */
+    color: #fff; /* テキスト色を白に設定 */
+    -webkit-background-clip: border-box; /* クリッピングを解除 */
+    background-clip: border-box;
+    -webkit-text-fill-color: #fff; /* テキスト色を白に設定 */
+}
+
+
 .accordion__question {
-    color: $white;
-    max-width: 85%;
+    max-width: 85%; 
     text-align: left;
     font-size: rem(16);
+    line-height: 1.45;
     font-weight: $bold;
-    letter-spacing: 0.04em;
+    padding-top: rem(-10);
     @include mq(md) {
         max-width: rem(733);
-        font-size: rem(24);
+        font-size: rem(16);
+        line-height: calc(20/16);
+        padding-top: 0;
     }
+
 }
 
 .accordion__answer{
-    text-align: left;
     color: $white;
-    font-size: rem(16);
+    text-align: left;
+    font-size: rem(14);
     font-weight: $medium;
-    max-width: 87%;
+    line-height: calc(22/14);
+    max-width: 83%;
     @include mq(md) {
-        font-size: rem(20);
-        max-width: 100%;
+        max-width: rem(429);
+        padding-top: rem(5);
     }
 }
+
+
+
+
+
+
+
 
 .accordion__icon {
     font-size: rem(24);
     line-height: 1;
 }
-.accordion__border {
-    display: none; /* 初期状態では非表示 */
-}
-
-.accordion__item.active .accordion__border {
-    display: block; /* アコーディオンが開いた時に表示 */
-    border-top: 1px solid $white;
-    margin-left: auto;
-    margin-right: rem(7);
-    @include mq(md) {
-        border-top: 2px solid $white;
-        width: 91.2%;
-    }
-}
-
 
 .accordion__content {
     display: block; /* デフォルトで block にする */
@@ -123,11 +122,18 @@
 .accordion__item.active .accordion__content {
     max-height: 500px; /* 十分に大きい値を指定。コンテンツの高さに応じて調整可能 */
     opacity: 1; /* 表示する */
-    padding: rem(13.5) rem(0) rem(0) rem(50); /* パディングを元に戻す */
+    padding: rem(13.5) rem(20) ; /* パディングを元に戻す */
     @include mq(md) {        
-        padding: rem(20) rem(52) rem(20) rem(68);
+        padding: rem(20) rem(45);
     }
 }
+
+
+
+
+
+
+
 
 
 .accordion__item.active .accordion__content {
@@ -142,23 +148,25 @@
 }
 
 .accordion__icon {
+    background-color:#00C6FF;
     position: relative;
-    height: rem(35); /* 円の高さ */
-    max-width: rem(35);
+    max-width: rem(16);
     width: 100%;  /* 円の幅 */
+    height: rem(16); /* 円の高さ */
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 50%;
     @include mq(md) {
         max-width: 100%;
-        height: rem(32); /* 円の高さ */
-        width: rem(32);  /* 円の幅 */
+        width: rem(16);  /* 円の幅 */
+        height: rem(16); /* 円の高さ */
     }
 }
 
 .accordion__icon span {
-    background-color: $white; /* 線の色 */
-    height: 2px; /* 線の厚み */
+    background-color: $white;
+    height: rem(1); /* 線の厚み */
     width: 50%; /* 円の中に収まる幅 */
     position: absolute;
     @include mq(md) {

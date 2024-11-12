@@ -1,0 +1,104 @@
+@use "global" as *;
+
+.trouble{
+    background-image: url('../images/common/trouble.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: rem(60) 0 rem(80);
+} 
+
+.trouble__inner{
+    max-width: $max-width;
+    margin: auto;
+    padding: 0 rem(25);
+    @include mq(md) {
+        max-width: rem(783);
+        padding: 0 rem(25);
+    }
+}
+
+
+.trouble__en{
+    font-family: $second-font;
+    text-transform: uppercase;
+    color: #0191FF;
+    font-size: rem(16);
+    font-weight: $bold;
+    line-height: calc(35.9/16);
+    letter-spacing: 0.1em;
+    @include mq(md) {
+        font-size: rem(20.97);
+        line-height: calc(35.9/20.97);
+    }
+}
+
+.trouble__img{
+    width: rem(348);
+    height: rem(234);
+    margin: rem(-20) auto 0;
+    @include mq(md) {
+        width: rem(691);
+        height: rem(202);
+        margin-top: rem(-20);
+        margin-left: auto;
+        margin-right: 0;
+    }
+}
+
+.trouble__text{
+    margin-top: rem(40);
+    text-align: left;
+    font-size: rem(16);
+    font-weight: $medium;
+    line-height: calc(28/16);
+    letter-spacing: 0.02em;
+    @include mq(md) {
+        margin-top: rem(44.92);
+        line-height: calc(24/16);
+    }
+}
+
+.trouble__text-color{
+    color: #0072FF;
+}
+
+.trouble__graph{
+    margin: rem(40) auto 0;
+    @include mq(md) {
+        margin: rem(60) auto 0;
+    }
+}
+.trouble__graph img {
+    aspect-ratio: 339/222;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    @include mq(md) {
+        aspect-ratio: 733/481;
+    }
+}
+
+.trust-card__source{
+    color: #000;
+    display: flex;
+    justify-content: center;
+    margin-top: rem(3.68);
+    font-size: rem(5.53);
+    font-weight: $regular;
+    line-height: calc(17.3/5.53);
+    @include mq(md) {
+        margin-top: rem(7.88);
+        font-size: rem(11.98);
+        line-height: calc(37.4/11.98);
+    }
+}
+
+.trust-card__source-text{
+    text-decoration: underline;
+}
+
+.trust-card__source-text a:hover{
+    opacity: 0.5;
+    transition: 0.3s;
+}

@@ -1,0 +1,103 @@
+@use "global" as *;
+
+
+
+.consultation-card{
+    position: relative;
+}
+
+.consultation-card__corner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: rem(220);
+    height: rem(132);
+    z-index: 1;
+    @include mq(md) {
+        width: rem(168);
+        height: rem(100);
+    }
+}
+
+.consultation-card__head{
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 0 rem(27.79);
+    @include mq(md) {
+        gap: 0 rem(21.26);
+    }
+}
+
+.consultation-card__border{
+    width: rem(55.58);
+    border-bottom: solid 1.16px #00C6FF;
+    @include mq(md) {
+        width: rem(42.52);
+        border-bottom: solid 0.88px #00C6FF;
+    }
+}
+
+.consultation-card__step{
+    color: #00C6FF;
+    font-size: rem(23.16);
+    font-weight: $bold;
+    line-height: calc(49.9/23.16);
+    @include mq(md) {
+        font-size: rem(17.64);
+        line-height: calc(38/17.64);
+    }
+}
+
+.consultation-card__step span {
+    font-family: $second-font;
+    font-weight: $semiBold;
+    letter-spacing: -0.06em;
+}
+
+.consultation-card__text{
+    position: relative;
+    z-index: 10;
+    margin-top: rem(29.27);
+    font-size: rem(20.84);
+    font-weight: $bold;
+    @include mq(md) {
+        margin-top: rem(6.36);
+        font-size: rem(15.87);
+    }
+}
+
+.consultation-card__text--margin{
+    margin-top: rem(29.27);
+    @include mq(md) {
+        margin-top: rem(-10);
+    }
+}
+
+.consultation-card__text--text{
+    text-align: left;
+}
+
+.consultation-card__text--text span {
+    color: #FFAA00;
+}
+
+.consultation-card__img{
+    margin-top: rem(67.17);
+    padding: 0 rem(22.90);
+    @include mq(md) {
+        margin-top: rem(20);
+        padding: 0 rem(17.52);
+    }
+}
+
+.consultation-card__img img {
+    aspect-ratio: 233/145;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    @include mq(md) {
+        aspect-ratio: 178/111;
+    }
+}

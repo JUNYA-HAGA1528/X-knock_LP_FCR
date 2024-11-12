@@ -1,13 +1,25 @@
 @use "global" as *;
 
 .faq{
-    background-color: #00C6FF;
+    background-image: url('../images/common/faq-bg.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: rem(80) 0;
     @include mq(md) {
         padding: rem(100) 0 rem(80);
     }
 }
 
+.faq__inner{
+    max-width: $max-width;
+    margin: auto;
+    padding: 0 rem(25);
+    @include mq(md) {
+        max-width: rem(583);
+        padding: 0 ;
+    }
+}
 
 .faq__title{
     color: $white;
@@ -42,4 +54,8 @@
         width: rem(474);
         height: rem(47);       
     }
+}
+
+.fag__accordion{
+    margin-top: rem(40);
 }

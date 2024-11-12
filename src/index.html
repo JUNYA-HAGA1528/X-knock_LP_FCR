@@ -24,8 +24,9 @@
 
     <!-- フォント -->
     <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
-
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
 
     <!-- css -->
@@ -36,71 +37,408 @@
     <script defer src="./assets/js/script.js"></script>
 </head>
 
-<header class="header">
-    <div class="header__inner">
-        <h1 class="header__logo">
-            <img src="./assets/images/common/logo.svg" alt="トナベンエナジー" loading="lazy">
-        </h1>
-        <figure class="header__phone">
-            <a href="tel:0120-598-775">
-                <picture loading="lazy">
-                    <source srcset="./assets/images/common/header-phone.png" media="(min-width: 768px)">
-                    <img src="./assets/images/common/header-phone-sp.png" alt="現地調査・お見積りは無料です！お電話はこちら">
-                </picture>
-            </a>
-        </figure>
-    </div>
-</header>
-
-
 <body>
-    <section class="main">
+
+    <!------------------------
+    header
+    -------------------------->
+    <header class="header">
+        <div class="header__inner">
+            <h1 class="header__logo">
+                <img src="./assets/images/common/logo.svg" alt="トナベンエナジー" loading="lazy">
+            </h1>
+            <figure class="header__phone">
+                <a href="tel:0120-598-775">
+                    <picture loading="lazy">
+                        <source srcset="./assets/images/common/header-phone.png" media="(min-width: 768px)">
+                        <img src="./assets/images/common/header-phone-sp.png" alt="現地調査・お見積りは無料です！お電話はこちら">
+                    </picture>
+                </a>
+            </figure>
+        </div>
+    </header>
+
+
+
+    <main class="main">
         <div class="main__container">
             <div class="main__content">
 
 
+                <!------------------------
+                悪徳業者には注意しましょう
+                -------------------------->
+                <section class="main__trouble trouble">
+                    <div class="trouble__inner">
+                        <div class="trouble__head">
+                            <p class="trouble__en">topic</p>
+                            <h2 class="trouble__img">
+                                <picture loading="lazy">
+                                    <source srcset="./assets/images/common/trouble-img.webp" media="(min-width: 768px)">
+                                    <img src="./assets/images/common/trouble-img-sp.webp" alt="太陽光発電のトラブル増加中！悪徳業者には注意しましょう">
+                                </picture>
+                            </h2>
+                        </div>
+                        <p class="trouble__text">太陽光発電の導入が進む中で、業者とのトラブルも増加しています。特に、悪徳業者による<span class="trouble__text-color">高額な契約</span>や不当な工事、メンテナンス不足などが原因で、後々のトラブルに発展するケースが報告されています。トラブルの内容には、<span class="trouble__text-color">過剰な価格設定、未完成の工事、不適切な設置</span>による不具合などが含まれ、契約後に困惑する消費者が増えています。太陽光発電の設置を検討する際には、信頼できる業者を選び、契約内容をしっかり確認することが重要です。</p>
+                        <figure class="trouble__graph">
+                            <img src="./assets/images/common/trouble-graph.webp" alt="トラブル相談数のグラフ" loading="lazy">
+                        </figure>
+                        <div class="trust-card__source">
+                            <p class="trust-card__source-title">参照元：</p>
+                            <p class="trust-card__source-text">
+                                <a href="http://maruteki.org/trouble/land/90/" target="_blank">
+                                    大家四季報
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </section>
 
 
 
-
-
-
-
-
-
-
-
-                <div class="main__faq faq">
-                    <h2 class="faq__title">
-                        <img class="faq-logo" src="./assets/images/common/faq-title-logo.png" alt="" loading="lazy">
-                        太陽光発電・蓄電池の関して<br>
-                        <span>よくある質問</span>
-                    </h2>
-                    <ul class="fag__accordion accordion">
-                        <li class="accordion__item">
-                            <div class="accordion__header">
-                                <div class="accordion__textBox">
-                                    <p class="accordion__head">Q</p>
-                                    <p class="accordion__question">LMコネクトは運用とサポートをどこまで行ってくれるんですか？</p>
-                                </div>
-                                <p class="accordion__icon">
-                                    <span></span>
-                                    <span></span>
-                                </p>
+                <!------------------------
+                太陽光発電に関するトラブル事例
+                -------------------------->
+                <section class="main__case case">
+                    <div class="case__inner">
+                        <div class="case__head">
+                            <div class="case__box">
+                                <div class="case__box-border"></div>
+                                <img class="case__box-icon" src="./assets/images/common/caution-icon.webp" alt="" loading="lazy">
+                                <div class="case__box-border"></div>
                             </div>
-                            <div class="accordion__border"></div>
-                            <div class="accordion__content">
-                                <div class="accordion__textBox">
-                                    <p class="accordion__head">Q</p>
-                                    <p class="accordion__answer">
-                                        LINE内に関しては制限なしで全ての業務を巻き取ってサポートいたします。LINE内において別途費用がかかることはございません
+                            <h2 class="case__title">
+                                太陽光発電に関する<br class="u-mobile"><span>トラブル事例</span>
+                            </h2>
+                            <div class="case__border"></div>
+                        </div>
+
+                        <ul class="case__list">
+                            <li class="case__item">
+                                <img class="case__face" src="./assets/images/common/case-face1.webp" alt="事例1" loading="lazy">
+                                <figure class="case__img">
+                                    <img src="./assets/images/common/case1.webp" alt="暗い背景にスーツを着て腕を組む男性の一部の姿勢">
+                                </figure>
+                                <p class="case__text">
+                                    ある消費者が訪問販売業者から「電気代が大幅に削減される」と説明を受け、太陽光発電システムを契約しました。しかし、設置後に想定された発電量が得られず、十分な電気代の削減効果も実感できませんでした。<br>
+                                    さらに、契約金額が市場価格よりも大幅に高く、ローンの返済が家計の負担となってしまいました。
+                                </p>
+                            </li>
+                            <li class="case__item">
+                                <img class="case__face" src="./assets/images/common/case-face2.webp" alt="事例2" loading="lazy">
+                                <figure class="case__img">
+                                    <img src="./assets/images/common/case2.webp" alt="ビジネススーツを着た二人が資料を見ながら話し合っている様子">
+                                </figure>
+                                <p class="case__text">
+                                    別の消費者が太陽光発電システムを設置後、年数が経過するにつれて発電量が急激に減少しました。<br>
+                                    原因は設置の不備やメンテナンス不足による故障と判明しましたが、販売業者はすでに倒産しており、修理費用は自己負担となってしまいました。
+                                </p>
+                            </li>
+                            <li class="case__item">
+                                <img class="case__face" src="./assets/images/common/case-face3.webp" alt="事例3" loading="lazy">
+                                <figure class="case__img">
+                                    <img src="./assets/images/common/case3.webp" alt="キッチンでノートパソコンを前に悩む女性と、それを心配そうに見守る男性">
+                                </figure>
+                                <p class="case__text">
+                                    業者から「これだけの発電量が得られるので、電気代をほとんどゼロにできます」と言われて契約した消費者が、実際には期待したほどの発電量が得られなかったというケースです。<br>
+                                    日射量や設置条件を十分に考慮せずに設置されたため、当初の見積もりとは大きく異なり、期待外れに終わりました。
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+
+
+                <!------------------------
+                だからこそ！相見積もりが必要です
+                -------------------------->
+                <section class="main__bidding bidding">
+                    <div class="bidding__inner">
+                        <h2 class="bidding__title">
+                            <img src="./assets/images/common/" alt="" loading="lazy">
+                        </h2>
+
+                        <div class="comparison__achievements-content">
+                            <table class="comparison__table">
+                                <thead>
+                                    <tr class="tr">
+                                        <th>物件種別</th>
+                                        <th>エリア</th>
+                                        <th>売却価格</th>
+                                        <th>敷地面積</th>
+                                        <th>築年数</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>マンション</td>
+                                        <td>中野区中央</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>25年</td>
+                                    </tr>
+                                    <tr>
+                                        <td>マンション</td>
+                                        <td>中野区東中野</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>9年</td>
+                                    </tr>
+                                    <tr>
+                                        <td>土地</td>
+                                        <td>中野区大和町</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>戸建て</td>
+                                        <td>中野区弥生町</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>戸建て</td>
+                                        <td>中野区弥生町</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>37年</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+
+                
+
+
+
+
+
+
+
+
+                <!------------------------
+                ご相談から設置まで
+                -------------------------->
+                <section class="main__consultation consultation">
+                    <div class="consultation__head">
+                        <div class="consultation__box">
+                            <img class="consultation__box-left" src="./assets/images/common/consultation-title-left.webp" alt="" loading="lazy">
+                            <p class="consultation__subtitle">
+                                まずは気軽<span class="consultation__subtitle-first">に</span><br class="u-mobile"><span class="consultation__subtitle-second">相談</span><span class="consultation__subtitle-third">してみてください</span>&nbsp;!!
+                            </p>
+                            <img class="consultation__box-right" src="./assets/images/common/consultation-title-right.webp" alt="" loading="lazy">
+                        </div>
+                        <h2 class="consultation__title">ご相談から設置まで</h2>
+                    </div>
+                    <div class="consultation__inner">
+
+
+                        <ul class="consultation__list">
+                            <li class="consultation__item consultation-card">
+                                <img class="consultation-card__corner" src="./assets/images/common/corner.webp" alt="" loading="lazy">
+                                <div class="consultation-card__head">
+                                    <div class="consultation-card__border"></div>
+                                    <p class="consultation-card__step">STEP.<span>01</span></p>
+                                    <div class="consultation-card__border"></div>
+                                </div>
+                                <p class="consultation-card__text consultation-card__text--margin">無料相談の申込み</p>
+                                <figure class="consultation-card__img">
+                                    <img src="./assets/images/common/step1.webp" alt="無料相談をしている女性" loading="lazy">
+                                </figure>
+                                <img class="consultation-card__comment" src="./assets/images/common/consultation-comment.webp" alt="たった30秒で完了！" loading="lazy">
+                            </li>
+                            <li class="consultation__item consultation-card">
+                                <img class="consultation-card__corner" src="./assets/images/common/corner.webp" alt="" loading="lazy">
+                                <div class="consultation-card__head">
+                                    <div class="consultation-card__border"></div>
+                                    <p class="consultation-card__step">STEP.<span>02</span></p>
+                                    <div class="consultation-card__border"></div>
+                                </div>
+                                <p class="consultation-card__text">
+                                    現地相談で電気代などを<br>
+                                    ヒアリング
+                                </p>
+                                <figure class="consultation-card__img">
+                                    <img src="./assets/images/common/step2.webp" alt="ヒアリングをしている男性" loading="lazy">
+                                </figure>
+                            </li>
+                            <li class="consultation__item consultation-card">
+                                <img class="consultation-card__corner" src="./assets/images/common/corner.webp" alt="" loading="lazy">
+                                <div class="consultation-card__head">
+                                    <div class="consultation-card__border"></div>
+                                    <p class="consultation-card__step">STEP.<span>03</span></p>
+                                    <div class="consultation-card__border"></div>
+                                </div>
+                                <p class="consultation-card__text consultation-card__text--text">
+                                    <span>・</span>電気代シミュレーション<br>
+                                    <span>・</span>お見積り<br>
+                                    <span>・</span>補助金の提示
+                                </p>
+                                <figure class="consultation-card__img">
+                                    <img src="./assets/images/common/step3.webp" alt="シミュレーションをしている家族" loading="lazy">
+                                </figure>
+                            </li>
+                            <li class="consultation__item consultation-card">
+                                <img class="consultation-card__corner" src="./assets/images/common/corner.webp" alt="" loading="lazy">
+                                <div class="consultation-card__head">
+                                    <div class="consultation-card__border"></div>
+                                    <p class="consultation-card__step">STEP.<span>04</span></p>
+                                    <div class="consultation-card__border"></div>
+                                </div>
+                                <p class="consultation-card__text">
+                                    ご契約・工事前調査<br>
+                                    設置工事
+                                </p>
+                                <figure class="consultation-card__img">
+                                    <img src="./assets/images/common/step4.webp" alt="工事をしている男性" loading="lazy">
+                                </figure>
+                            </li>
+                            <li class="consultation__item consultation-card">
+                                <img class="consultation-card__corner" src="./assets/images/common/corner.webp" alt="" loading="lazy">
+                                <div class="consultation-card__head">
+                                    <div class="consultation-card__border"></div>
+                                    <p class="consultation-card__step">STEP.<span>05</span></p>
+                                    <div class="consultation-card__border"></div>
+                                </div>
+                                <p class="consultation-card__text">
+                                    20年の<br>
+                                    メンテナンス保証
+                                </p>
+                                <figure class="consultation-card__img">
+                                    <img src="./assets/images/common/step5.webp" alt="スタッフ一覧" loading="lazy">
+                                </figure>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+
+
+
+
+
+
+
+                <!------------------------
+                よくある質問
+                -------------------------->
+                <section class="main__faq faq">
+                    <div class="faq__inner">
+                        <h2 class="faq__title">
+                            <img class="faq-logo" src="./assets/images/common/faq-title-logo.webp" alt="" loading="lazy">
+                            太陽光発電・蓄電池の関して<br>
+                            <span>よくある質問</span>
+                        </h2>
+                        <ul class="fag__accordion accordion">
+                            <li class="accordion__item">
+                                <div class="accordion__header">
+                                    <div class="accordion__textBox">
+                                        <p class="accordion__head">Q.</p>
+                                        <p class="accordion__question">太陽光発電の設置にはどれくらいの費用がかかりますか？</p>
+                                    </div>
+                                    <p class="accordion__icon">
+                                        <span></span>
+                                        <span></span>
                                     </p>
                                 </div>
-                            </div>
-                        </li>
-                    </ul>
-    
-                </div>
+                                <div class="accordion__content">
+                                    <div class="accordion__textBox accordion__textBox--start">
+                                        <p class="accordion__head accordion__head--color">A.</p>
+                                        <p class="accordion__answer">
+                                            太陽光発電の設置費用は、システムの規模やパネルの種類、設置条件により異なりますが、一般的な4kWシステムの場合、100万円から200万円程度が目安です。自治体によっては補助金制度があるため、これを活用することで初期費用を抑えられる場合もあります。
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="accordion__item">
+                                <div class="accordion__header">
+                                    <div class="accordion__textBox">
+                                        <p class="accordion__head">Q.</p>
+                                        <p class="accordion__question">メンテナンスはどのように行いますか？</p>
+                                    </div>
+                                    <p class="accordion__icon">
+                                        <span></span>
+                                        <span></span>
+                                    </p>
+                                </div>
+                                <div class="accordion__content">
+                                    <div class="accordion__textBox accordion__textBox--start">
+                                        <p class="accordion__head accordion__head--color">A.</p>
+                                        <p class="accordion__answer">
+                                            太陽光発電システムのメンテナンスは、基本的に年1～2回の定期点検と清掃が推奨されています。パネルに汚れや鳥のフンがつくと発電効率が下がるため、専門業者によるパネル表面の清掃を行うことが一般的です。
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="accordion__item">
+                                <div class="accordion__header">
+                                    <div class="accordion__textBox">
+                                        <p class="accordion__head">Q.</p>
+                                        <p class="accordion__question">太陽光発電のパネルはどのくらいの寿命ですか？</p>
+                                    </div>
+                                    <p class="accordion__icon">
+                                        <span></span>
+                                        <span></span>
+                                    </p>
+                                </div>
+                                <div class="accordion__content">
+                                    <div class="accordion__textBox accordion__textBox--start">
+                                        <p class="accordion__head accordion__head--color">A.</p>
+                                        <p class="accordion__answer">
+                                            太陽光発電パネルの寿命は、一般的に20～30年とされていますが、パネル自体の劣化は少しずつ進むため、発電効率が年々低下します。メーカーの保証期間は通常10年～25年程度で、この期間内であれば一定の発電効率を保つことが保証されています。
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="accordion__item">
+                                <div class="accordion__header">
+                                    <div class="accordion__textBox">
+                                        <p class="accordion__head">Q.</p>
+                                        <p class="accordion__question">設置にはどのぐらい時間がかかりますか？</p>
+                                    </div>
+                                    <p class="accordion__icon">
+                                        <span></span>
+                                        <span></span>
+                                    </p>
+                                </div>
+                                <div class="accordion__content">
+                                    <div class="accordion__textBox accordion__textBox--start">
+                                        <p class="accordion__head accordion__head--color">A.</p>
+                                        <p class="accordion__answer">
+                                            太陽光発電システムの設置には、設置前の準備期間を含め、数日から1週間程度の工事時間がかかるのが一般的です。実際の工事は、パネル設置場所の条件によって異なりますが、通常は2～3日で完了します。
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="accordion__item">
+                                <div class="accordion__header">
+                                    <div class="accordion__textBox">
+                                        <p class="accordion__head">Q.</p>
+                                        <p class="accordion__question">売電収入はどれくらい期待できますか？</p>
+                                    </div>
+                                    <p class="accordion__icon">
+                                        <span></span>
+                                        <span></span>
+                                    </p>
+                                </div>
+                                <div class="accordion__content">
+                                    <div class="accordion__textBox accordion__textBox--start">
+                                        <p class="accordion__head accordion__head--color">A.</p>
+                                        <p class="accordion__answer">
+                                            売電収入は、パネルの発電量、設置地域、電力の買取価格によって異なります。一般的には年間で10～20万円程度の収入が見込まれますが、売電価格は年々変動するため、設置当初の価格が将来も続くわけではありません。売電期間中に発電量が下がったり、買取価格が変更されたりすることも考慮し、シミュレーションを行うのが良いでしょう。
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
             </div>
 
 
@@ -113,104 +451,99 @@
 
             </div>
         </div>
-    </section>
+    </main>
 
 
 
 
+
+
+    <!------------------------
+    footer
+    -------------------------->
+    <footer class="footer">
+        <div class="footer__inner">
+            <h2 class="footer__logo">
+                <img src="./assets/images/common/logo.svg" alt="トナベンエナジー" loading="lazy">
+            </h2>
+            <div class="footer__container">
+                <div class="footer__left">
+                    <h3 class="footer__title">運営会社概要</h3>
+                    <dl class="footer__overview">
+                        <div class="footer__overview-item">
+                            <dt>運営会社</dt>
+                            <dd>FCR株式会社</dd>
+                        </div>
+                        <div class="footer__overview-item">
+                            <dt>屋号</dt>
+                            <dd>トベシンエナジー</dd>
+                        </div>
+                        <div class="footer__overview-item">
+                            <dt>代表名</dt>
+                            <dd>池辺&nbsp;晋一朗</dd>
+                        </div>
+                        <div class="footer__overview-item">
+                            <dt>フリーダイヤル</dt>
+                            <dd>0120&nbsp;‐&nbsp;598&nbsp;‐&nbsp;775</dd>
+                        </div>
+                    </dl>
+                </div>
+                <div class="footer__right">
+                    <div class="footer__headOffice">
+                        <h3 class="footer__title">本社</h3>
+                        <p class="footer__headOffice-number">〒271-0064</p>
+                        <p class="footer__headOffice-address">千葉県松戸市上本郷2868-8</p>
+                    </div>
+                    <div class="footer__branchOffice">
+                        <h3 class="footer__title">支店</h3>
+                        <div class="footer__branchOffice-content">
+                            <div class="footer__branchOffice-left">
+                                <div class="footer__branchOffice-wrapper">
+                                    <h4 class="footer__branchOffice-prefecture">千葉県</h4>
+                                    <p class="footer__branchOffice-address">松戸支店：<br>〒271-0064 千葉県松戸市上本郷2868-8</p>
+                                    <p class="footer__branchOffice-address">野田支店：<br>〒278-0036 千葉県野田市中野台鹿島町11-25</p>
+                                    <p class="footer__branchOffice-address">市川支店：<br>〒272-0025 千葉県市川市大和田1-16-16 <br>シャトレ103</p>
+                                    <p class="footer__branchOffice-address">流山支店：<br>〒270-0176 千葉県流山市加4-1687</p>
+                                    <p class="footer__branchOffice-address">松戸支店：<br>〒271-0064 千葉県松戸市上本郷2868-8</p>
+                                    <p class="footer__branchOffice-address">柏支店：<br>〒277-0005 千葉県柏市柏7丁目10−18</p>
+                                    <p class="footer__branchOffice-address">八千代支店：<br>〒276-0046 千葉県八千代市大和田新田353-101</p>
+                                </div>
+                                <div class="footer__branchOffice-wrapper">
+                                    <h4 class="footer__branchOffice-prefecture">神奈川県</h4>
+                                    <p class="footer__branchOffice-address">横浜支店：<br>〒244-0815 神奈川県横浜市戸塚区下倉田町72</p>
+                                </div>
+                                <div class="footer__branchOffice-wrapper">
+                                    <h4 class="footer__branchOffice-prefecture">東京都</h4>
+                                    <p class="footer__branchOffice-address">大田支店：<br>東京都大田区上池台</p>
+                                </div>
+                            </div>
+                            <div class="footer__branchOffice-right">
+                                <div class="footer__branchOffice-wrapper">
+                                    <h4 class="footer__branchOffice-prefecture">埼玉県</h4>
+                                    <p class="footer__branchOffice-address">上尾支店：<br>〒362-0064 埼玉県上尾市小敷谷709-1 <br>クレストヴィラヒヨシ 104号室</p>
+                                    <p class="footer__branchOffice-address">川口支店：<br>〒332-0031 埼玉県川口市青木2-5-32<br>青木ローヤルコーポ101</p>
+                                    <p class="footer__branchOffice-address">鴻巣支店：<br>〒365-0074 埼玉県鴻巣市神明1-6-14 <br>鴻巣ルートホビー3号</p>
+                                    <p class="footer__branchOffice-address">川越支店：<br>〒350-1114 埼玉県川越市東田町5-6 <br>山岸ビル105</p>
+                                    <p class="footer__branchOffice-address">県久喜支店：<br>〒346-0013 埼玉県久喜市青葉4-25-10<br>メルベーユ1号館102</p>
+                                </div>
+                                <div class="footer__branchOffice-wrapper">
+                                    <h4 class="footer__branchOffice-prefecture">茨城県</h4>
+                                    <p class="footer__branchOffice-address">取手支店：<br>〒302-0024 茨城県取手市新町5-17-10<br>エグゼエスプリ1F</p>
+                                    <p class="footer__branchOffice-address">つくば支店：<br>〒305-0045 茨城県つくば市梅園2-2-20 <br>グレースコートつくば101</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__link">
+                <p class="footer__privacy">プライバシーポリシー</p>
+                <p class="footer__management">運営会社</p>
+            </div>
+            <p class="footer__copyright">
+                <small>Copyright© FCR corporation All rights reserved.</small>
+            </p>
+        </div>
+    </footer>
 </body>
-
-
-<footer class="footer">
-    <div class="footer__inner">
-        <h2 class="footer__logo">
-            <img src="./assets/images/common/logo.svg" alt="トナベンエナジー" loading="lazy">
-        </h2>
-        <div class="footer__container">
-            <div class="footer__left">
-                <h3 class="footer__title">運営会社概要</h3>
-                <dl class="footer__overview">
-                    <div class="footer__overview-item">
-                        <dt>運営会社</dt>
-                        <dd>FCR株式会社</dd>
-                    </div>
-                    <div class="footer__overview-item">
-                        <dt>屋号</dt>
-                        <dd>トベシンエナジー</dd>
-                    </div>
-                    <div class="footer__overview-item">
-                        <dt>代表名</dt>
-                        <dd>池辺&nbsp;晋一朗</dd>
-                    </div>
-                    <div class="footer__overview-item">
-                        <dt>フリーダイヤル</dt>
-                        <dd>0120&nbsp;‐&nbsp;598&nbsp;‐&nbsp;775</dd>
-                    </div>
-                </dl>
-            </div>
-            <div class="footer__right">
-                <div class="footer__headOffice">
-                    <h3 class="footer__title">本社</h3>
-                    <p class="footer__headOffice-number">〒271-0064</p>
-                    <p class="footer__headOffice-address">千葉県松戸市上本郷2868-8</p>
-                </div>
-                <div class="footer__branchOffice">
-                    <h3 class="footer__title">支店</h3>
-                    <div class="footer__branchOffice-content">
-                        <div class="footer__branchOffice-left">
-                            <div class="footer__branchOffice-wrapper">
-                                <h4 class="footer__branchOffice-prefecture">千葉県</h4>
-                                <p class="footer__branchOffice-address">松戸支店：<br>〒271-0064 千葉県松戸市上本郷2868-8</p>
-                                <p class="footer__branchOffice-address">野田支店：<br>〒278-0036 千葉県野田市中野台鹿島町11-25</p>
-                                <p class="footer__branchOffice-address">市川支店：<br>〒272-0025 千葉県市川市大和田1-16-16 <br>シャトレ103</p>
-                                <p class="footer__branchOffice-address">流山支店：<br>〒270-0176 千葉県流山市加4-1687</p>
-                                <p class="footer__branchOffice-address">松戸支店：<br>〒271-0064 千葉県松戸市上本郷2868-8</p>
-                                <p class="footer__branchOffice-address">柏支店：<br>〒277-0005 千葉県柏市柏7丁目10−18</p>
-                                <p class="footer__branchOffice-address">八千代支店：<br>〒276-0046 千葉県八千代市大和田新田353-101</p>
-                            </div>
-                            <div class="footer__branchOffice-wrapper">
-                                <h4 class="footer__branchOffice-prefecture">神奈川県</h4>
-                                <p class="footer__branchOffice-address">横浜支店：<br>〒244-0815 神奈川県横浜市戸塚区下倉田町72</p>
-                            </div>
-                            <div class="footer__branchOffice-wrapper">
-                                <h4 class="footer__branchOffice-prefecture">東京都</h4>
-                                <p class="footer__branchOffice-address">大田支店：<br>東京都大田区上池台</p>
-                            </div>
-                        </div>
-                        <div class="footer__branchOffice-right">
-                            <div class="footer__branchOffice-wrapper">
-                                <h4 class="footer__branchOffice-prefecture">埼玉県</h4>
-                                <p class="footer__branchOffice-address">上尾支店：<br>〒362-0064 埼玉県上尾市小敷谷709-1 <br>クレストヴィラヒヨシ 104号室</p>
-                                <p class="footer__branchOffice-address">川口支店：<br>〒332-0031 埼玉県川口市青木2-5-32<br>青木ローヤルコーポ101</p>
-                                <p class="footer__branchOffice-address">鴻巣支店：<br>〒365-0074 埼玉県鴻巣市神明1-6-14 <br>鴻巣ルートホビー3号</p>
-                                <p class="footer__branchOffice-address">川越支店：<br>〒350-1114 埼玉県川越市東田町5-6 <br>山岸ビル105</p>
-                                <p class="footer__branchOffice-address">県久喜支店：<br>〒346-0013 埼玉県久喜市青葉4-25-10<br>メルベーユ1号館102</p>
-                            </div>
-                            <div class="footer__branchOffice-wrapper">
-                                <h4 class="footer__branchOffice-prefecture">茨城県</h4>
-                                <p class="footer__branchOffice-address">取手支店：<br>〒302-0024 茨城県取手市新町5-17-10<br>エグゼエスプリ1F</p>
-                                <p class="footer__branchOffice-address">つくば支店：<br>〒305-0045 茨城県つくば市梅園2-2-20 <br>グレースコートつくば101</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-
-
-
-
-        <div class="footer__link">
-            <p class="footer__privacy">プライバシーポリシー</p>
-            <p class="footer__management">運営会社</p>
-        </div>
-        <p class="footer__copyright">
-            <small>Copyright© FCR corporation All rights reserved.</small>
-        </p>
-    </div>
-</footer>
-
 </html>

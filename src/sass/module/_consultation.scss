@@ -1,0 +1,158 @@
+@use "global" as *;
+
+.consultation{
+    background-color: #00C6FF;
+    padding: rem(60) 0 rem(80);
+    @include mq(md) {
+        padding: rem(73) 0 rem(80);
+    }
+}
+
+.consultation__inner{
+    max-width: $max-width;
+    margin: auto;
+    padding: 0 rem(54);
+    @include mq(md) {
+        max-width: rem(771);
+        padding: 0 rem(25);
+    }
+}
+
+.consultation__box{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 0 rem(17.44);
+    @include mq(md) {
+        gap: 0 rem(24.65);
+    }
+}
+
+.consultation__box::before{
+    background-image: url('../images/common/consultation-icon.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    content: "";
+    top: rem(-108);
+    right: calc(50% - min(50%, 10.5rem));
+    width: rem(100);
+    height: rem(139);
+    z-index: 1;
+    @include mq(md) {
+        right: calc(50% - min(50%, 30rem));
+        top: rem(-92);
+        width: rem(139);
+        height: rem(194);
+    }
+}
+
+.consultation__box-left,
+.consultation__box-right{
+    width: rem(39.56);
+    height: rem(63.08);
+}
+
+.consultation__subtitle{
+    color: $white;
+    font-size: rem(24);
+    font-weight: $bold;
+    line-height: 1.38;
+    @include mq(md) {
+        font-size: rem(32.1);
+        font-weight: $medium;
+        line-height: 1.73;
+    }
+}
+
+.consultation__subtitle-first{
+    font-size: rem(24);
+    @include mq(md) {
+        font-size: rem(26.75);
+    }
+}
+
+.consultation__subtitle-second{
+    font-size: rem(20);
+    @include mq(md) {
+        font-size: rem(32.1);
+    }
+}
+
+.consultation__subtitle-third{
+    font-size: rem(20);
+    @include mq(md) {
+        font-size: rem(26.75);
+    }
+}
+
+.consultation__title{
+    color:#144F93 ;
+    font-size: rem(28);
+    font-weight: 900;
+    line-height: 1.3;
+    letter-spacing: 0.08em;
+    margin-top: rem(6);
+    @include mq(md) {
+        margin-top: rem(0);
+        font-size: rem(32);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.consultation__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: rem(40);
+    margin-top: rem(40);
+    padding-bottom: rem(60);
+    @include mq(md) {
+        gap: rem(40);
+    }
+}
+
+  /* 各ボックスのスタイル */
+.consultation__item {
+    position: relative;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* 要素を縦に並べる */
+    justify-content: space-between;
+    min-height: rem(397);
+    padding: rem(23.16) 0 rem(53.39);
+    @include mq(md) {
+        width: rem(212);
+        min-height: rem(303);
+        padding: rem(19.64) 0 rem(38);
+    }
+}
+
+.consultation-card__comment{
+    position: absolute;
+    z-index: 100;
+    top: 40%;
+    right: 7%;
+    width: rem(108);
+    height: rem(108);
+    @include mq(md) {
+        width: rem(83);
+        height: rem(83);
+        top: 40%;
+        right: 7%;    
+    }
+}
