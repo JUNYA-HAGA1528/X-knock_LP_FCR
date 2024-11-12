@@ -10,11 +10,6 @@
 .main__container{
     display: flex;
     justify-content: center;
-    max-width: $max-width;
-    margin: auto;
-    @include mq(md) {
-        max-width: rem(1440);
-    }
 }
 
 .main__content{

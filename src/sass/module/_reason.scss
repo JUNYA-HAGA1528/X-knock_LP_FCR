@@ -2,6 +2,10 @@
 
 .reason{
     padding: rem(80) 0 rem(78);
+    background-image: url('../images/common/reason-sp-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     @include mq(md) {
         padding: rem(80) 0 rem(100);
         background-image: url('../images/common/reason-pc-bg.jpg');

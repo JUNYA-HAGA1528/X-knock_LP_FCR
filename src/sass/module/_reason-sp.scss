@@ -1,11 +1,5 @@
 @use "global" as *;
 
-.reason-sp{
-    background-image: url('../images/common/reason-pc-bg.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
 .reason-sp__inner{
     max-width: $max-width;
@@ -15,7 +9,9 @@
 
 
 
-
+.reason-sp__item + .reason-sp__item{
+    margin-top: rem(60);
+}
 
 .reason-sp__number{
     width: rem(161);
@@ -23,12 +19,17 @@
 }
 
 .reason-sp__title{
-    margin-top: rem(-5);
+    margin-top: rem(-10);
+}
+
+.reason-sp__title--margin{
+    margin-top: rem(-20);
+    width: rem(246);
 }
 
 .reason-sp__img{
     width: 94%;
-    margin: rem(20) auto 0;
+    margin: 0 auto;
 }
 
 .reason-sp__img img {
@@ -38,7 +39,67 @@
     object-fit: cover;
 }
 
+.reason-sp__text{
+    text-align: left;
+    margin-top: rem(40);
+    color: #444;
+    font-size: rem(16);
+    font-weight: $medium;
+    line-height: calc(28/16);
+}
+
+.reason-sp__text--second{
+    margin-top: rem(106);
+}
+
+
+.reason-sp__box{
+    margin-top: rem(20);
+}
+
+.reason-sp__box--first{
+    position: relative;
+}
+
 .reason-sp__icon-first{
-    width: rem(100);
-    height: rem(100);
+    position: absolute;
+    bottom: -33px;
+    left: -3.5%;
+    width: rem(110);
+    height: rem(110);
+}
+
+.reason-sp__box--second{
+    position: relative;
+}
+
+.reason-sp__icon-second{
+    position: absolute;
+    bottom: -64px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: rem(342);
+    height: rem(163);
+}
+
+.reason-sp__box--third{
+    position: relative;
+}
+
+.reason-sp__icon-third{
+    position: absolute;
+    bottom: -58px;
+    right: 5%;
+    width: rem(157);
+    height: rem(92);
+}
+
+.reason-sp-text{
+    width: rem(340);
+    height: rem(278);
+    margin: rem(76.33) auto 0;
+}
+
+.reason-sp__text--five{
+    margin: rem(70.33) auto 0;
 }
