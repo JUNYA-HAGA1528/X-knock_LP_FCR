@@ -1,0 +1,188 @@
+@use "global" as *;
+
+.accordion{
+    text-align: left;
+}
+
+.accordion__item{
+    max-width: rem(583);
+    margin: 0 auto;
+}
+
+.accordion__item + .accordion__item{
+    margin-top: rem(24);
+    @include mq(md) {
+        margin-top: rem(20);
+    }
+}
+
+.accordion__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: #5e5e5e;
+    cursor: pointer;
+    padding: rem(0) rem(0) rem(16);
+    font-size: rem(16);
+    font-weight: bold;
+    @include mq(md) {
+        padding: rem(0) ;
+    }
+}
+
+.accordion__item.active .accordion__header {
+    border-radius: rem(27) rem(27) 0 0; /* 上部の border-radius だけ適用 */
+}
+
+.accordion__item.active .accordion__content {
+    border-radius: 0 0 rem(27) rem(27); /* 下部の border-radius を適用 */
+}
+
+.accordion__item .accordion__header {
+    border-radius: rem(27); /* アコーディオンが閉じたときに全体に適用 */
+}
+
+.accordion__textBox{
+    display: flex;
+    align-items:center;
+    gap: 0 rem(10);
+    @include mq(md) {
+        gap: 0 rem(20);
+    }
+}
+
+.accordion__head{
+    background-color: #fff;
+    border-radius: 50%;
+    padding: rem(10) rem(12);
+    font-size: rem(20);
+    font-weight: $medium;
+    line-height: 1;
+    letter-spacing: 0.04em;
+    @include mq(md) {
+        padding: rem(6) rem(12) rem(14);
+        font-size: rem(30);
+    }
+}
+
+.accordion__question {
+    color: $white;
+    max-width: 85%;
+    text-align: left;
+    font-size: rem(16);
+    font-weight: $bold;
+    letter-spacing: 0.04em;
+    @include mq(md) {
+        max-width: rem(733);
+        font-size: rem(24);
+    }
+}
+
+.accordion__answer{
+    text-align: left;
+    color: $white;
+    font-size: rem(16);
+    font-weight: $medium;
+    max-width: 87%;
+    @include mq(md) {
+        font-size: rem(20);
+        max-width: 100%;
+    }
+}
+
+.accordion__icon {
+    font-size: rem(24);
+    line-height: 1;
+}
+.accordion__border {
+    display: none; /* 初期状態では非表示 */
+}
+
+.accordion__item.active .accordion__border {
+    display: block; /* アコーディオンが開いた時に表示 */
+    border-top: 1px solid $white;
+    margin-left: auto;
+    margin-right: rem(7);
+    @include mq(md) {
+        border-top: 2px solid $white;
+        width: 91.2%;
+    }
+}
+
+
+.accordion__content {
+    display: block; /* デフォルトで block にする */
+    max-height: 0; /* 初期状態は高さゼロ */
+    overflow: hidden; /* コンテンツが溢れないようにする */
+    opacity: 0; /* 初期状態は透明にする */
+    padding: 0; /* 初期はパディングもゼロ */
+    transition: max-height 0.7s ease, opacity 0.7s ease, padding 0.7s ease; /* アニメーションの設定 */
+}
+
+.accordion__item.active .accordion__content {
+    max-height: 500px; /* 十分に大きい値を指定。コンテンツの高さに応じて調整可能 */
+    opacity: 1; /* 表示する */
+    padding: rem(13.5) rem(0) rem(0) rem(50); /* パディングを元に戻す */
+    @include mq(md) {        
+        padding: rem(20) rem(52) rem(20) rem(68);
+    }
+}
+
+
+.accordion__item.active .accordion__content {
+    display: block;
+}
+
+.accordion__icon,
+.accordion__icon span {
+    display: inline-block;
+    transition: all 0.4s;
+    box-sizing: border-box;
+}
+
+.accordion__icon {
+    position: relative;
+    height: rem(35); /* 円の高さ */
+    max-width: rem(35);
+    width: 100%;  /* 円の幅 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include mq(md) {
+        max-width: 100%;
+        height: rem(32); /* 円の高さ */
+        width: rem(32);  /* 円の幅 */
+    }
+}
+
+.accordion__icon span {
+    background-color: $white; /* 線の色 */
+    height: 2px; /* 線の厚み */
+    width: 50%; /* 円の中に収まる幅 */
+    position: absolute;
+    @include mq(md) {
+        width: 50%; /* 円の中に収まる幅 */
+    }
+}
+
+.accordion__icon span:nth-of-type(1) {
+    transform: rotate(0deg); /* 横線 */
+    visibility: visible;
+    opacity: 1;
+}
+
+.accordion__icon span:nth-of-type(2) {
+    transform: rotate(90deg); /* 縦線 */
+    visibility: visible;
+    opacity: 1;
+}
+
+.accordion__item.active .accordion__icon span:nth-of-type(1) {
+    visibility: hidden; /* アコーディオンが開いた時に横線を非表示 */
+    opacity: 0;
+}
+
+.accordion__item.active .accordion__icon span:nth-of-type(2) {
+    transform: rotate(0deg); /* アコーディオンが開いた時に縦線を回転させない */
+}

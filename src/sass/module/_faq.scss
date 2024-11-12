@@ -1,0 +1,45 @@
+@use "global" as *;
+
+.faq{
+    background-color: #00C6FF;
+    padding: rem(80) 0;
+    @include mq(md) {
+        padding: rem(100) 0 rem(80);
+    }
+}
+
+
+.faq__title{
+    color: $white;
+    font-size: rem(24);
+    font-weight: $bold;
+    line-height: calc(43.1/24);
+    position: relative;
+    @include mq(md) {
+        font-size: rem(32);
+    }
+}
+
+.faq__title span {
+    color: #F3F02F;
+    font-size: rem(32);
+    font-weight: 900;
+    @include mq(md) {
+        font-size: rem(40);
+    }
+}
+
+.faq-logo{
+    position: absolute;
+    top: -12%;
+    left: 0;
+    right: 0;
+    width: rem(364);
+    height: rem(40);
+    margin: 0 auto;
+    @include mq(md) {
+        top: -10%;
+        width: rem(474);
+        height: rem(47);       
+    }
+}

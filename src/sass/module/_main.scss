@@ -1,0 +1,36 @@
+@use "global" as *;
+
+.main{
+    text-align: center;
+    @include mq(md) {
+        background-color: none;
+    }
+}
+
+.main__container{
+    display: flex;
+    justify-content: center;
+    max-width: $max-width;
+    margin: auto;
+    @include mq(md) {
+        max-width: rem(1440);
+    }
+}
+
+.main__content{
+    width: 100%;
+    background-color: $white;
+    @include mq(md){
+        width: 75%;
+    }
+}
+
+
+.main__aside{
+    width: 100%;
+    @include mq(md){
+        width: 25%;
+        background-color: #65C4E8;
+
+    }
+}

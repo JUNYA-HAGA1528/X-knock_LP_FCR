@@ -1,0 +1,28 @@
+@use "global" as *;
+
+.aside__img + .aside__img{
+    margin-top: rem(20);
+}
+
+.aside__img{
+    width: 92.7%;
+    margin: 0 auto;
+}
+
+.aside__img img {
+    aspect-ratio:315/315 ;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+.aside__img img {
+    transition: transform .3s ease; /* ゆっくり変化させる */
+}
+
+.aside__img img:hover {
+    transform: scale(1.02); /* 拡大 */
+}
