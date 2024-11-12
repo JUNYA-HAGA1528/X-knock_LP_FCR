@@ -1,0 +1,203 @@
+@use "global" as *;
+
+.footer{
+    color: $white;
+    background-color:#434343;
+    padding: rem(60) 0 rem(10);
+    @include mq(md) {
+        padding: rem(80) 0 rem(20);
+    }
+}
+
+.footer__inner{
+    max-width: $max-width;
+    margin: auto;
+    padding: 0 rem(25);
+    @include mq(md) {
+        max-width: rem(1230);
+    }
+}
+
+.footer__logo{
+    width: rem(258);
+    height: rem(38.56);
+    @include mq(md) {
+        width: rem(324);
+        height: rem(48.04);
+    }
+}
+
+.footer__container{
+    margin-top: rem(40);
+    @include mq(md) {
+        margin-top: rem(20);
+        display: flex;
+        gap: 0 rem(162);
+    }
+}
+
+
+.footer__left{
+    font-size: rem(20);
+    font-weight: $medium;
+    line-height: calc(43.1/20);
+    @include mq(md) {
+        width: 28.81%;
+    }
+}
+
+.footer__right{
+    margin-top: rem(60);
+    @include mq(md) {
+        margin-top: rem(0);
+        width: 57.62%;
+    }
+}
+
+.footer__title{
+    font-size: rem(20);
+    font-weight: $medium;
+    line-height: calc(43.1/20);
+}
+
+.subtitle{
+    font-weight: $bold;
+}
+
+.footer__overview{
+    margin-top: rem(10);
+}
+
+.footer__overview-item{
+    display: flex;
+    align-items: center;
+    gap: rem(20);
+    border-bottom: solid 1px $white;
+    white-space: nowrap;
+}
+
+.footer__overview-item + .footer__overview-item{
+    margin-top: rem(10);
+}
+
+.footer__overview-item dt {
+    @include mq(md) {
+        width: 41.17%;
+    }
+}
+
+.footer__overview-item dd {
+    @include mq(md) {
+        width: 47.05%;
+    }
+}
+
+.footer__headOffice{
+    border-bottom: solid 1px $white;
+    padding-bottom: rem(40);
+    @include mq(md) {
+        padding-left: rem(17);
+    }
+}
+
+.footer__headOffice-number{
+    margin-top: rem(10);
+    font-size: rem(16);
+    font-weight: $bold;
+}
+
+.footer__headOffice-address{
+    font-size: rem(20);
+    font-weight: $bold; 
+}
+
+.footer__branchOffice{
+    margin-top: rem(40);
+    @include mq(md) {
+        margin-top: rem(30);
+        padding-left: rem(17);
+    }
+}
+
+.footer__branchOffice-content{
+    margin-top: rem(20);
+    font-size: rem(13);
+    font-weight: $bold;
+    @include mq(md) {
+        margin-top: rem(10);
+        display: flex;
+        gap: 0 rem(40);
+    }
+}
+
+.footer__branchOffice-right{
+    margin-top: rem(40);
+    @include mq(md) {
+        margin-top: rem(0);
+    }
+}
+
+
+.footer__branchOffice-prefecture{
+    padding-bottom: rem(10);
+    font-size: rem(16);
+}
+
+.footer__branchOffice-wrapper + .footer__branchOffice-wrapper{
+    margin-top: rem(40);
+}
+
+
+
+
+.footer__branchOffice-address{
+    display: flex;
+    margin-top: rem(8);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer__link{
+    margin-top: rem(40);
+    text-decoration: underline;
+    display: flex;
+    align-items: center;
+    gap: 0 rem(10);
+    font-size: rem(13);
+    font-weight: $medium;
+    line-height: calc(43.1/13);
+    @include mq(md) {
+        gap: rem(20);
+        font-size: rem(16);
+        line-height: calc(43.1/16);
+    }
+}
+
+.footer__copyright{
+    text-align: center;
+    font-size: rem(12);
+    font-weight: $regular;
+    line-height: calc(43.1/16);
+    @include mq(md) {
+        text-align: left;
+        margin-top: rem(20);
+        font-size: rem(16);
+        line-height: calc(43.1/16);
+    }
+}
