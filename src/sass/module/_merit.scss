@@ -37,7 +37,7 @@
     height: rem(125);
     z-index: 1;
     @include mq(md) {
-        top: rem(23);
+        top: rem(15);
         right: calc(50% - min(64%, rem(800)));
         width: rem(165);
         height: rem(213);
@@ -50,7 +50,7 @@
     margin: rem(10) auto 0;
     @include mq(md) {
         width: rem(340);
-        height: rem(53); 
+        height: rem(45); 
         margin: rem(25) auto 0;
     }
 }

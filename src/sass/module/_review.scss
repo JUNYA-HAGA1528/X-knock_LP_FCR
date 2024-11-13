@@ -1,2 +1,66 @@
 @use "global" as *;
 
+.review{
+    background-image: url('../images/common/review-bg-sp.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include mq(md) {
+        background-image: url('../images/common/review-bg.webp');
+        
+    }
+}
+
+.review__bg{
+    padding: rem(64) 0 rem(80) ;
+    @include mq(md) {
+        background-image: url('../images/common/review-bg-icon.webp');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: rem(1020) rem(1194);
+        padding: rem(23) 0 rem(80) ;
+    }
+}
+
+.review__head{
+    width: rem(358);
+    height: rem(107);
+    margin: 0 auto;
+    @include mq(md) {
+        width: rem(680);
+        height: rem(193);
+    }
+}
+
+.review__logo{
+    width: rem(340);
+    height: rem(52);
+    margin: rem(32.86) auto 0;
+    @include mq(md) {
+        width: rem(378);
+        height: rem(58);
+    }
+}
+
+.review_evaluation{
+    width: rem(340);
+    height: rem(120);
+    margin: rem(7.74) auto 0;
+    @include mq(md) {
+        width: rem(655);
+        height: rem(151);
+        margin: rem(-30) auto 0;
+    }
+}
+
+.review__img{
+    width: rem(320);
+    height: 100%;
+    margin: rem(40) auto 0;
+    @include mq(md) {
+        width: rem(582);
+        height: rem(494);
+        margin: rem(24) auto 0;
+    }
+}

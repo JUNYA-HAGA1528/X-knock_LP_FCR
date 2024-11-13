@@ -17,3 +17,29 @@
 	width: rem(100);
     height: 100%;
 }
+
+
+// 口コミのスライダー
+.review__swiper{
+	background-color: #D8F6FF;
+	margin-top: rem(40);
+	padding: rem(25) 0;
+	@include mq(md) {
+		padding: rem(20) 0;
+	}
+}
+
+.swiper-review__img{
+	width: rem(204);
+    height: rem(156);
+}
+
+.swiper-review__img img {
+	aspect-ratio: 204/156;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	@include mq(md) {
+		aspect-ratio: 204/156;
+	}
+}

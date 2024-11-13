@@ -30,12 +30,14 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
             });
         });
         
-        
+
+
+        // swiper(企業名)
         var swiper = new Swiper(".js-features-swiper", {
             allowTouchMove: false, 
             centeredSlides: true,
             slidesPerView: "auto",
-            spaceBetween: 10,
+            spaceBetween: 20,
             speed: 2000,
             loop: true,
             autoplay: {
