@@ -1,0 +1,50 @@
+@use "global" as *;
+
+
+.subsidy-pc{
+    padding: rem(40) 0 rem(20);
+    position: relative;
+
+}
+
+.subsidy-pc::before{
+    background-image: url('../images/common/subsidy-pc-right.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    content: "";
+    top: rem(36);
+    right: calc(50% - min(50%, 32.5rem));
+    width: rem(283);
+    height: rem(278);
+    z-index: 1;
+}
+
+.subsidy-pc__bg{
+    position: relative;
+}
+
+.subsidy-pc__bg::before{
+    background-image: url('../images/common/subsidy-pc-left.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    content: "";
+    top: rem(-25);
+    left: calc(50% - min(50%, 30.4rem));
+    width: rem(291);
+    height: rem(329);
+    z-index: 1;
+}
+
+.subsidy-pc__img{
+    width: rem(571);
+    height: rem(283);
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+    
+}
+

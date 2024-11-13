@@ -1,0 +1,199 @@
+@use "global" as *;
+
+.subsidy{
+    background-image: url('../images/common/subsidy-bg.webp');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+
+.subsidy__sentence{
+    background-image: url('../images/common/subsidy-sentence-sp.webp');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: rem(26) 0 rem(42);
+    position: relative;
+    @include mq(md) {
+        background-image: url('../images/common/subsidy-sentence.webp');
+    }
+}
+
+.subsidy__title{
+    font-size: rem(28);
+    font-weight: 900;
+    line-height: calc(39/28);
+    letter-spacing: -0.03em;
+    @include mq(md) {
+        font-size: rem(48);
+    }
+}
+
+.subsidy__title span {
+    font-size: rem(36);
+    @include mq(md) {
+        font-size: rem(48);
+    }
+}
+
+
+
+.dot-text{
+    position: relative;
+}
+
+.dot-text::before{
+    position: absolute;
+    top: -5px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    content: "";
+    padding-top: 10px;
+    background: -webkit-radial-gradient(circle 5px,#00C6FF 50%,transparent 50%);
+    background: radial-gradient(circle 5px,#00C6FF 50%,transparent 50%);
+    background: -moz-radial-gradient(circle 5px,#00C6FF 50%,transparent 50%);
+    @include mq(md) {
+        top: -2px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        content: "";
+        padding-top: 10px;
+        background: -webkit-radial-gradient(circle 7px,#00C6FF 50%,transparent 50%);
+        background: radial-gradient(circle 7px,#00C6FF 50%,transparent 50%);
+        background: -moz-radial-gradient(circle 7px,#00C6FF 50%,transparent 50%);    
+    }
+}
+
+.subsidy__card{
+    background-image: url('../images/common/subsidy-card-bg.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: rem(-24);
+    padding: rem(45) 0 rem(74);
+    @include mq(md) {
+        padding: rem(40) 0 rem(28);
+    }
+}
+
+.subsidy__inner{
+    max-width: $max-width;
+    margin: auto;
+    padding: 0 rem(55);
+    @include mq(md) {
+        max-width: rem(930);
+        padding: 0 rem(25);
+    }
+}
+
+.subsidy__subtitle-top{
+    color: $white;
+    font-size: rem(24);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 1.2;
+    @include mq(md) {
+        font-size: rem(36);
+        line-height: 1.5;
+    }
+}
+
+.subsidy__subtitle-top span {
+    color: $black;
+    font-size: rem(20);
+    @include mq(md) {
+        font-size: rem(32);
+    }
+}
+
+.subsidy__list {
+    margin-top: rem(40);
+    padding: 0 rem(5);
+    @include mq(md) {
+        margin-top: rem(30);
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.subsidy__item {
+    @include mq(md) {
+        max-width: calc(33.3333% - 2.0625rem * 2 / 3);
+        width: 100%;
+    }
+}
+
+.subsidy__item + .subsidy__item {
+    margin-top: rem(20);
+    @include mq(md) {
+        margin-top: 0;
+        margin-left: rem(33);
+    }
+}
+
+
+
+.subsidy__subtitle-bottom{
+    width: rem(230);
+    margin: 0 auto;
+    text-align: left;
+    color: $white;
+    margin-top: rem(30);
+    font-size: rem(24);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 2;
+    @include mq(md) {
+        width: 100%;
+        text-align: center;
+        margin-top: rem(38.78);
+        font-size: rem(32);
+        line-height: 1.5;
+    }
+}
+
+.subsidy__subtitle-bottom-font{
+    color:#F3F02F ;
+    font-size: rem(35.15);
+    font-weight: 900;
+    letter-spacing: -0.1em;
+    @include mq(md) {
+        font-size: rem(48);
+        letter-spacing: -0.03em;
+    }
+}
+
+.dot-text-second{
+    position: relative;
+}
+
+.dot-text-second::before{
+    position: absolute;
+    top: -5px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    content: "";
+    padding-top: 10px;
+    background: -webkit-radial-gradient(circle 6px,$white 50%,transparent 50%);
+    background: radial-gradient(circle 6px,$white 50%,transparent 50%);
+    background: -moz-radial-gradient(circle 6px,$white 50%,transparent 50%);
+    @include mq(md) {
+        top: -2px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        content: "";
+        padding-top: 10px;
+        background: -webkit-radial-gradient(circle 7px,$white 50%,transparent 50%);
+        background: radial-gradient(circle 7px,$white 50%,transparent 50%);
+        background: -moz-radial-gradient(circle 7px,$white 50%,transparent 50%);    
+    }
+}
