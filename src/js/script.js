@@ -30,4 +30,27 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
             });
         });
         
+        
+        var swiper = new Swiper(".js-features-swiper", {
+            allowTouchMove: false, 
+            centeredSlides: true,
+            slidesPerView: "auto",
+            spaceBetween: 10,
+            speed: 2000,
+            loop: true,
+            autoplay: {
+                delay: 0,
+                disableOnInteraction: false,
+                reverseDirection: false // 左から右に流れるように設定
+            },
+            loopAdditionalSlides: 1,
+            breakpoints: {
+                768: {
+                    spaceBetween: 30
+                }
+            },
+        });
+        
+        
+        
 });

@@ -1,0 +1,129 @@
+@use "global" as *;
+
+
+.merit{
+    overflow: hidden;
+    background-image: url('../images/common/merit-bg.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: rem(40) 0 rem(80);
+    @include mq(md) {
+        padding: rem(80) 0 rem(60);
+    }
+}
+
+.merit__comment{
+    width: rem(340);
+    height: rem(117);
+    margin: 0 auto;
+    position: relative;
+    @include mq(md) {
+        width: rem(581);
+        height: rem(60); 
+    }
+}
+
+.merit__comment::before{
+    background-image: url('../images/common/merit-woman.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    content: "";
+    top: rem(126);
+    right: calc(50% - min(64%, rem(800)));
+    width: rem(105);
+    height: rem(125);
+    z-index: 1;
+    @include mq(md) {
+        top: rem(23);
+        right: calc(50% - min(64%, rem(800)));
+        width: rem(165);
+        height: rem(213);
+    }
+}
+
+.merit__text{
+    width: rem(252);
+    height: rem(33);
+    margin: rem(10) auto 0;
+    @include mq(md) {
+        width: rem(340);
+        height: rem(53); 
+        margin: rem(25) auto 0;
+    }
+}
+
+.merit__title{
+    width: rem(390);
+    height: rem(76);
+    margin: rem(12.5) auto 0;
+    position: relative;
+    @include mq(md) {
+        width: rem(780);
+        height: rem(76);
+        margin: rem(12.5) auto 0;
+    }
+}
+
+.merit__title::before{
+    background-image: url('../images/common/merit-man.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    content: "";
+    top: rem(-49);
+    left: calc(50% - min(57.5%, rem(800)));
+    width: rem(117);
+    height: rem(132);
+    z-index: 1;
+    @include mq(md) {
+        top: rem(-125);
+        left: calc(50% - min(50%, rem(800)));
+        width: rem(196);
+        height: rem(207);
+    }
+}
+
+
+
+
+
+
+
+
+.merit__inner{
+    max-width: $max-width;
+    margin: auto;
+    padding: 0 rem(53.5);
+    @include mq(md) {
+        max-width: rem(930);
+        padding: 0 rem(25);
+    }
+}
+
+.merit__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:rem(20) rem(40);
+    margin-top: rem(40);
+    @include mq(md) {
+        gap:rem(30) rem(17);
+        margin-top: rem(32);
+    }
+}
+
+  /* 各ボックスのスタイル */
+.merit__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* 要素を縦に並べる */
+    justify-content: space-between;
+    @include mq(md) {
+        width: rem(282);
+    }
+}
