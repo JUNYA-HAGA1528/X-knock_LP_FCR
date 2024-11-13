@@ -1,0 +1,124 @@
+@use "global" as *;
+
+
+.reason__accordion-form {
+    margin-top: rem(20);
+}
+
+.reason-accordion {
+    text-align: left;
+}
+
+.reason-accordion__item + .reason-accordion__item {
+    margin-top: rem(10);
+    @include mq(md) {
+        margin-top: rem(14.88);
+    }
+}
+
+.reason-accordion__item {
+    width: rem(208);
+    margin: 0 auto;
+}
+
+.reason-accordion__header {
+    font-family: $third-font;
+    border-radius: rem(18.03);
+    border: solid 1px #0191FF;
+    color: #0191FF;
+    background-color: $white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+    padding: rem(6) rem(22) rem(4);
+    font-size: rem(16);
+    font-weight: $semiBold;
+    @include mq(md) {
+        padding: rem(5) rem(22) rem(3);
+    }
+}
+
+.reason-accordion__item.active .reason-accordion__header {
+    background-color: #0191FF; /* 背景色を変更 */
+    color: #FFFFFF; /* 文字色を白に変更 */
+    border-color: #0191FF; /* ボーダー色も変更 */
+}
+
+.reason-accordion__question {
+    text-align: left;
+    font-size: rem(16);
+    line-height: 1.45;
+    font-weight: $bold;
+    letteracing: 0.06em;
+    @include mq(md) {
+        font-size: rem(15);
+    }
+}
+
+.reason-accordion__answer {
+    text-align: left;
+    font-size: rem(13);
+    font-weight: $bold;
+    max-width: 98%;
+}
+
+.reason-accordion__answer + .reason-accordion__answer{
+    margin-top: rem(20);
+}
+
+.reason-accordion__icon {
+    position: relative;
+    width: rem(16);
+    height: rem(16);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reason-accordion__icon::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: rem(5.5) solid transparent;
+    border-right: rem(5.5) solid transparent;
+    border-top: rem(7.5) solid #0191FF; /* デフォルトのアイコン色 */
+    transition: transform 0.4s ease, border-top-color 0.4s ease; /* 色のアニメーションも追加 */
+}
+
+.reason-accordion__item.active .reason-accordion__icon::before {
+    border-top-color: #FFFFFF; /* 開いた時のアイコン色を白に変更 */
+}
+
+
+.reason-accordion__item.active .reason-accordion__icon::before {
+    transform: rotate(180deg); /* アコーディオンが開いたときに上向きに回転 */
+}
+
+/* アニメーションのキーフレーム */
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.reason-accordion__content {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    padding: 0;
+    transition: max-height 0.3s ease, padding 0.4s ease;
+}
+
+.reason-accordion__item.active .reason-accordion__content {
+    max-height: 700px;
+    padding: rem(10) rem(20) rem(20);
+    animation: slideDown 0.4s ease forwards;
+}

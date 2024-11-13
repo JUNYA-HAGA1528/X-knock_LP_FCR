@@ -1,7 +1,7 @@
 
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
 
-        // アコーディオン
+        // アコーディオン（よくある質問）
         document.querySelectorAll('.accordion__header').forEach(button => {
             button.addEventListener('click', () => {
                 const accordionItem = button.parentElement;
@@ -17,4 +17,17 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
                 });
             });
         });
+
+
+
+        // アコーディオン(本当の5つの理由)
+        document.querySelectorAll('.reason-accordion__header').forEach(button => {
+            button.addEventListener('click', () => {
+                const accordionItem = button.parentElement;
+                
+                // アコーディオンの開閉
+                accordionItem.classList.toggle('active');
+            });
+        });
+        
 });

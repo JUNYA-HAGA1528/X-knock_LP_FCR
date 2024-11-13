@@ -103,3 +103,19 @@
 .reason-sp__text--five{
     margin: rem(70.33) auto 0;
 }
+
+.reason-sp__branch{
+    width: rem(208);
+    height: rem(26);
+    margin: rem(40) auto 0;
+    @include mq(md) {
+        width: rem(276);
+        height: rem(35);
+        margin: rem(19) auto 0;
+    }
+}
+
+.reason__accordion-container{
+    display: flex;
+    gap: 0 rem(7.44);
+}
