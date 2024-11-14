@@ -1,0 +1,70 @@
+@use "global" as *;
+
+.contact__container {
+    position: sticky;
+    top: 0px; /* 画面上部からの距離 */
+    max-height: 100vh; /* 画面の80%に制限 */
+    overflow-y: auto; /* コンテンツがあふれた場合にスクロール可能に */
+    padding: 0 20px;
+}
+
+
+.contact__frame{
+    padding-top: rem(10);
+}
+
+.contact__wrapper{
+    padding-top: rem(10);
+}
+
+.contact__wrapper--padding{
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: rem(40) rem(35) rem(80);
+}
+
+.contact__box{
+    background-image: url('../images/common/contact-sankaku.webp');
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: rem(235) rem(140);
+    background-color: $white;
+    padding: rem(20) 0 rem(30);
+}
+
+.contact__head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 rem(10);
+}
+
+.contact__title{
+    color: #00C6FF;
+    font-size: rem(24);
+    font-weight: 900;
+}
+
+.contact__border{
+    width: 22%;
+    border-bottom: solid 1px #00C6FF;
+}
+
+.contact__form{
+    max-width: rem(300);
+    margin: rem(10) auto 0;
+    padding: 0 rem(10);
+}
+
+.contact__frame--padding{
+    padding: rem(20) 0 0 0;
+}
+
+
+.btn-submit__body:hover{
+    transition: transform 0.3s ease;
+    transform: scale(1.05); /* 1.1倍に拡大 */
+}
+
+
+

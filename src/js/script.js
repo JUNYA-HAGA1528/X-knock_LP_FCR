@@ -76,20 +76,24 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         document.addEventListener("scroll", function () {
             const fv = document.querySelector(".fv");
             const ctaButtons = document.querySelector(".cta__buttons");
-        
-            if (fv) {
+            const footer = document.querySelector("footer");
+
+            if (fv && ctaButtons && footer) {
                 const fvBottom = fv.getBoundingClientRect().bottom;
-        
-                // fv が画面の上に完全に消えたらCTAボタンを表示
+                const footerTop = footer.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                // `fv` が画面の上に完全に消えたらCTAボタンを表示
                 if (fvBottom < 0) {
-                    ctaButtons.classList.add("show");  // クラス追加でCTAボタンを表示
+                    ctaButtons.classList.add("show");
                 } else {
-                    ctaButtons.classList.remove("show"); // クラス削除でCTAボタンを非表示
+                    ctaButtons.classList.remove("show");
+                }
+
+                // `footer` が画面に表示されたらCTAボタンを非表示
+                if (footerTop < windowHeight) {
+                    ctaButtons.classList.remove("show");
                 }
             }
         });
-        
-        
-        
-        
 });
