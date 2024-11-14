@@ -7,6 +7,11 @@
     }
 }
 
+.main__frame{
+    position: relative;
+    z-index: 9999;
+}
+
 .main__container{
     display: flex;
     justify-content: center;

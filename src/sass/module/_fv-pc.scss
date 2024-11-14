@@ -1,0 +1,123 @@
+@use "global" as *;
+
+
+.fv-pc__container{
+    position: relative;
+    max-width: rem(1220);
+    margin: 0 auto;
+}
+
+.fv-human{
+    position: absolute;
+    right: 0;
+    top: -9.1%;
+    width: rem(324);
+    height: rem(702);
+    z-index: 1;
+}
+
+
+
+.fv-pc__bg{
+    position: relative;
+}
+
+.fv-pc__bg::before{
+    background-image: url('../images/common/fv-table.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    content: "";
+    top: rem(180);
+    right: calc(50% - min(50%, 33rem));
+    width: 35%;
+    height: 74%;
+    z-index: 1;
+    @media (max-width: 1250px) {
+        width: 33%;
+        height: 72%;
+    }
+}
+
+.fv-pc__inner{
+    max-width: rem(999);
+    margin: 0 auto;
+    padding: 0 rem(10);
+    position: relative;
+    z-index: 100;
+}
+
+.fv-pc__inner::before{
+    background-image: url('../images/common/fv-comment1.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    content: "";
+    top: rem(-70);
+    left: calc(50% - min(50%, 31rem));
+    width: 22%;
+    height: 18%;
+    z-index: 9999;
+    @media (min-width: 1441px) {
+        top: rem(-50);
+        width: 16%;
+        height: 12%;
+    }
+}
+
+.fv-pc__price{
+    margin-top: rem(-30);
+    width: rem(797);
+    height: rem(149);
+}
+
+
+
+.fv-pc__sun{
+    width: rem(683);
+    height: rem(95);
+}
+
+.fv-pc__title{
+    margin-top: rem(30);
+    position: relative;
+}
+
+.fv-pc__title::before{
+    background-image: url('../images/common/fv-comment2.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    content: "";
+    top: rem(-50);
+    right: calc(50% - min(50%, 15rem));
+    width: rem(183);
+    height: rem(63);
+    z-index: 9999;
+}
+
+.fv-pc__title img {
+    width: rem(594);
+    height: rem(154);
+}
+
+.fv-pc__content{
+    display: flex;
+    align-items: end;
+    gap: 0 rem(103);
+}
+
+.fv-pc__list{
+    margin-top: rem(27.87); 
+    display: flex;
+    align-items: center;
+    gap: 0 rem(24.27);
+}
+
+.fv-pc__item{
+    width: rem(133);
+    height: rem(133);
+}

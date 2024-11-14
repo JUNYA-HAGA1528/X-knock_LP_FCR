@@ -1,0 +1,10 @@
+@use "global" as *;
+
+
+.fv__pc{
+    background-image: url('../images/common/fv-bg.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: rem(60);
+}
