@@ -1,0 +1,32 @@
+@use "global" as *;
+
+
+
+
+
+.cta__buttons {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.5);    
+    padding: rem(10) 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* 最初は透明にする */
+    transform: translateY(20px); /* 最初は少し下に移動 */
+    transition: opacity 0.6s ease, transform 0.6s ease; /* トランジション効果 */
+}
+
+.cta__buttons img {
+    width: rem(322);
+    height: rem(70);
+}
+
+.cta__buttons.show {
+    opacity: 1; /* 表示時に透明度を1に */
+    transform: translateY(0); /* 元の位置に戻す */
+}

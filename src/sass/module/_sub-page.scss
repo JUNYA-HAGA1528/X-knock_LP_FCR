@@ -1,0 +1,70 @@
+@use "global" as *;
+
+.sub__content{
+    background-image: url('../images/common/sub-bg.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: rem(46) 0 rem(120);
+    @include mq(md) {
+        padding: rem(200) 0 rem(185);
+    }
+}
+
+.sub__inner{
+    max-width: $max-width;
+    margin: auto;
+    padding: 0 rem(35);
+    @include mq(md) {
+        max-width: rem(970);
+        padding: 0 rem(25);
+    }
+}
+
+.sub__title{
+    background: linear-gradient(90deg, #3ACADD 0%, #5A88E5 100%);
+    -webkit-background-clip: text;
+    background-clip: text; /* 一部のブラウザで必要 */
+    -webkit-text-fill-color: transparent;
+    color: transparent; /* 他のブラウザでもテキストの透明化を確実にするため */
+    font-size: rem(24);
+    font-weight: $bold;
+    text-align: center;
+    @include mq(md) {
+        font-size: rem(32);
+    }
+}
+
+.sub__sentence{
+    margin-top: rem(60);
+    @include mq(md) {
+        margin-top: rem(80);
+    }
+}
+
+.sub__text{
+    font-size: rem(16);
+    font-weight: $medium;
+    line-height: calc(2);
+    letter-spacing: 0.01em;
+}
+
+.sub__text + .sub__text{
+    margin-top: rem(20);
+}
+
+.sub-button{
+    margin-top: rem(60);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub-button img {
+    width: rem(340);
+    height: rem(68);
+    @include mq(md) {
+        width: rem(400);
+        height: rem(90); 
+    }
+}
