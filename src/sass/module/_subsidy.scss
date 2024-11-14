@@ -16,9 +16,10 @@
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: rem(26) 0 rem(42);
+    padding: rem(30) 0 rem(42);
     position: relative;
     @include mq(md) {
+        padding: rem(26) 0 rem(42);
         background-image: url('../images/common/subsidy-sentence.webp');
     }
 }
@@ -71,13 +72,14 @@
 }
 
 .subsidy__card{
-    background-image: url('../images/common/subsidy-card-bg.webp');
+    background-image: url('../images/common/subsidy-card-bg-sp.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     margin-top: rem(-24);
-    padding: rem(45) 0 rem(74);
+    padding: rem(45) 0 rem(70);
     @include mq(md) {
+        background-image: url('../images/common/subsidy-card-bg.webp');
         padding: rem(40) 0 rem(28);
     }
 }

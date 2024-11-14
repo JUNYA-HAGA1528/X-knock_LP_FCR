@@ -50,7 +50,7 @@
     text-align: left;
     font-size: rem(16);
     line-height: 1.45;
-    font-weight: $bold;
+    font-weight: $semiBold;
     letteracing: 0.06em;
     @include mq(md) {
         font-size: rem(15);

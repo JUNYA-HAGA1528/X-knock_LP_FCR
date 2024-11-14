@@ -8,6 +8,7 @@
 
 .subsidy-sp__bg{
     position: relative;
+    padding-top: rem(25);
 }
 
 .subsidy-sp__bg::before{
@@ -17,8 +18,8 @@
     background-size: contain;
     position: absolute;
     content: "";
-    top: rem(164);
-    left: calc(50% - min(63%, rem(800)));
+    top: rem(180);
+    left: calc(50% - min(66%, rem(800)));
     width: rem(245);
     height: rem(168);
     z-index: 1;

@@ -20,6 +20,7 @@
     font-size: rem(16);
     font-weight: bold;
     @include mq(md) {
+
         padding:rem(30) rem(45);
     }
 }
@@ -56,6 +57,7 @@
     font-weight: $medium; /* 変数$mediumが正しく設定されていることを確認 */
     line-height: 1;
     @include mq(md) {
+        margin-top: rem(-5);
         font-size: rem(27);
     }
 }
@@ -146,51 +148,58 @@
     transition: all 0.4s;
     box-sizing: border-box;
 }
-
 .accordion__icon {
-    background-color:#00C6FF;
+    background-color: $white;
+    border: solid 1px #00C6FF;
     position: relative;
     max-width: rem(16);
-    width: 100%;  /* 円の幅 */
-    height: rem(16); /* 円の高さ */
+    width: 100%;
+    height: rem(16);
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
+    transition: background-color 0.4s, border-color 0.4s;
     @include mq(md) {
         max-width: 100%;
-        width: rem(16);  /* 円の幅 */
-        height: rem(16); /* 円の高さ */
+        width: rem(17.5);
+        height: rem(17);
     }
 }
 
 .accordion__icon span {
-    background-color: $white;
-    height: rem(1); /* 線の厚み */
-    width: 50%; /* 円の中に収まる幅 */
+    background-color: #00C6FF;
+    height: rem(1);
+    width: 50%;
     position: absolute;
+    transition: background-color 0.4s, opacity 0.4s;
     @include mq(md) {
-        width: 50%; /* 円の中に収まる幅 */
+        width: 50%;
     }
 }
 
 .accordion__icon span:nth-of-type(1) {
-    transform: rotate(0deg); /* 横線 */
-    visibility: visible;
-    opacity: 1;
+    transform: rotate(0deg); /* デフォルトの横線 */
 }
 
 .accordion__icon span:nth-of-type(2) {
-    transform: rotate(90deg); /* 縦線 */
-    visibility: visible;
-    opacity: 1;
+    transform: rotate(90deg); /* デフォルトの縦線 */
+}
+
+/* アコーディオンが開いたときのスタイル */
+.accordion__item.active .accordion__icon {
+    background-color: #00C6FF;
+    border-color: #00C6FF;
+}
+
+.accordion__item.active .accordion__icon span {
+    background-color: #ffffff;
 }
 
 .accordion__item.active .accordion__icon span:nth-of-type(1) {
-    visibility: hidden; /* アコーディオンが開いた時に横線を非表示 */
-    opacity: 0;
+    opacity: 1; /* 横線は表示 */
 }
 
 .accordion__item.active .accordion__icon span:nth-of-type(2) {
-    transform: rotate(0deg); /* アコーディオンが開いた時に縦線を回転させない */
+    opacity: 0; /* 縦線は非表示にしてマイナス記号に見せる */
 }

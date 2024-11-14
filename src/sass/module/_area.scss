@@ -2,6 +2,7 @@
 
 .area{
     background-color: #144F93;
+    margin-top: rem(-70);
     @include mq(md) {
         margin-top: rem(-164);
     }
@@ -9,10 +10,10 @@
 
 .area__bg{
     background-image: url('../images/common/area-bg-sp.webp');
-    background-position: center;
+    background-position: center calc(100% + 20px);
     background-repeat: no-repeat;
-    background-size: rem(518) rem(1200);
-    padding: rem(102) 0 rem(60);
+    background-size: rem(518) rem(1130);
+    padding: rem(130) 0 rem(60);
     @include mq(md) {
         background-image: url('../images/common/area-bg.webp');
         background-position: center calc(100% - -40px);
@@ -92,7 +93,7 @@
     position: relative;
     @include mq(md) {
         margin-top: rem(35);
-        padding: rem(40) rem(102);
+        padding: rem(40) 0;
     }
 }
 
@@ -110,7 +111,7 @@
     z-index: 1;
     @include mq(md) {
         background-image: url('../images/common/area-comment.webp');
-        top: rem(-108);
+        top: rem(-102);
         right: calc(50% - min(50%, 28rem));
         width: rem(379);
         height: rem(175);

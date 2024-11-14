@@ -119,7 +119,6 @@
     justify-content: center;
     gap: rem(40);
     margin-top: rem(40);
-    padding-bottom: rem(60);
     @include mq(md) {
         gap: rem(40);
     }
