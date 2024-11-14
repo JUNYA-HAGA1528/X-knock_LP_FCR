@@ -16,11 +16,12 @@
 .merit__comment{
     width: rem(340);
     height: rem(117);
-    margin: 0 auto;
+    margin: rem(40) auto 0;
     position: relative;
     @include mq(md) {
         width: rem(581);
         height: rem(60); 
+        margin: 0 auto;
     }
 }
 

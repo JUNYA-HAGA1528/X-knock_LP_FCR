@@ -83,6 +83,7 @@
 .fv-pc__title{
     margin-top: rem(30);
     position: relative;
+    padding-left: rem(5);
 }
 
 .fv-pc__title::before{
@@ -111,7 +112,8 @@
 }
 
 .fv-pc__list{
-    margin-top: rem(27.87); 
+    margin-top: rem(27.87);
+    padding-left: rem(5);
     display: flex;
     align-items: center;
     gap: 0 rem(24.27);

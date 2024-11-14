@@ -17,16 +17,18 @@
     height: rem(69);
     @include mq(md) {
         padding: 0 rem(10.55) 0 rem(80); 
-        height: rem(90);
+        height: rem(94);
     }
 }
 
 .header__phone{
     width: rem(206);
     height: rem(57);
+    display: flex;
+    align-items: center;
     @include mq(md) {
-        width: rem(330);
-        height: rem(85);
+        width: rem(333);
+        height: rem(93);
     }
 }
 

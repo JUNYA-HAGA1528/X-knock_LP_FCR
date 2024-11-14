@@ -1,3 +1,83 @@
 @use "global" as *;
 
+.fv-sp__bg{
+    position: relative;
+    max-width: $max-width;
+    margin: auto;
+    
+}
 
+.fv-sp__bg::before{
+    background-image: url('../images/common/fv-human-sp.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    content: "";
+    top: rem(-55);
+    right: calc(50% - min(68%, rem(800)));
+    width: rem(276);
+    height: rem(659);
+    z-index: 0;
+}
+
+.fv-sp__inner{
+    max-width: $max-width;
+    margin: auto;
+    padding-left: rem(20);
+    position: relative;
+}
+
+.fv-sp__inner::before{
+    background-image: url('../images/common/fv-comment1.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    content: "";
+    top: rem(-50);
+    left: calc(50% - min(50%, 11.5rem));
+    width: rem(126);
+    height: rem(61);
+    z-index: 9999;
+}
+
+.fv-sp__price{
+    width: rem(313);
+    height: rem(159);
+    margin-top: rem(28);
+}
+
+.fv-sp__sun{
+    width: rem(369.98);
+    height: rem(93.59);
+    margin-top: rem(-15);
+}
+
+.fv-sp__title{
+    width: rem(298);
+    height: rem(78);
+    margin-top: rem(7.4);
+    padding-left: rem(5);
+}
+
+.fv-sp__table{
+    width: rem(338);
+    height: rem(249);
+    margin-top: rem(10.4);
+    padding-left: rem(5);
+}
+
+.fv-sp__list{
+    margin-top: rem(10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 rem(9);
+    position: relative;
+}
+
+.fv-sp__item img {
+    width: rem(90);
+    height: rem(90);
+}

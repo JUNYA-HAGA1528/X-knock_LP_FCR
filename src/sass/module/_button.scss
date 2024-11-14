@@ -1,0 +1,85 @@
+@use "global" as *;
+
+
+.button__inner{
+    max-width: $max-width;
+    margin: auto;
+    padding: 0 rem(25);
+    position: relative;
+}
+
+.button__inner::before{
+    background-image: url('../images/common/button-megane.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    content: "";
+    top: rem(-20);
+    left: calc(50% - min(50%, 10rem));
+    width: rem(63);
+    height: rem(70);
+    z-index: 1;
+}
+
+.button__sentence{
+    background-color: #0192FF;
+    padding: rem(12) 0;
+    position: relative;
+}
+
+.button__sentence::before{
+    background-image: url('../images/common/reason-matter-icon.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    content: "";
+    top: rem(-30);
+    right: calc(50% - min(50%, 9.5rem));
+    width: rem(50);
+    height: rem(100);
+    z-index: 1;
+}
+
+.button__text{
+    color: $white;
+    font-size: rem(20);
+    font-weight: 900;
+    letter-spacing: 0.01em;
+    line-height: 1.3;
+}
+
+.button__text-color{
+    color: #F3F02F;
+}
+
+.button__text-font{
+    font-size: rem(16);
+}
+
+.button__wrapper{
+    background-color: $white;
+    padding: rem(20) 0;
+    border: solid 2.25px #76D0FE;
+}
+
+.button__img{
+    width: rem(300);
+    height: rem(69);
+    margin: 0 auto;
+}
+
+.button__img:hover{
+    transition: transform 0.3s ease;
+    transform: scale(1.05); /* 1.1倍に拡大 */
+}
+
+
+.button__caution{
+    color: #FF5E05;
+    margin-top: rem(10);
+    font-size: rem(16);
+    font-weight: 900;
+    letter-spacing: 0.01em;
+}

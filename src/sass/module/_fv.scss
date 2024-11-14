@@ -1,5 +1,9 @@
 @use "global" as *;
 
+.fv{
+    overflow: hidden;
+}
+
 
 .fv__pc{
     background-image: url('../images/common/fv-bg.webp');
@@ -7,4 +11,12 @@
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: rem(60);
+}
+
+.fv__sp{
+    background-image: url('../images/common/fv-bg-sp.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: rem(22.33);
 }

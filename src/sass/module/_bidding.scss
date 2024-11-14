@@ -152,3 +152,11 @@
         font-size: rem(20);
     }
 }
+
+
+.bidding__button{
+    margin-top: rem(60);
+    @include mq(md) {
+        margin-top: rem(0);
+    }
+}
