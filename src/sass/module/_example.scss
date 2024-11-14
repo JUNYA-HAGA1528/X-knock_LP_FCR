@@ -1,0 +1,114 @@
+@use "global" as *;
+
+
+
+.example{
+    background-image: url('../images/common/example-bg-sp.webp');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    @include mq(md) {
+        background-image: url('../images/common/example-bg.webp');
+    }
+}
+
+.example__inner{
+    max-width: $max-width;
+    margin: auto;
+    padding: 0 rem(5);
+    @include mq(md) {
+        max-width: rem(1033);
+        padding: 0 rem(25);
+    }
+}
+
+// swiper
+.example__swiper{
+padding: rem(10) 0 rem(113);
+    text-align: center;
+    @include mq(md) {
+        padding: rem(59) 0 rem(138);
+
+    }
+}
+
+.example__content{
+    width: 89.5%;
+    margin: 0 auto;
+    @include mq(md) {
+        width: 74.67%;
+    }
+}
+
+.example__comment{
+    margin-top: rem(10);
+    @include mq(md) {
+        margin-top: rem(20);
+    }
+}
+
+
+
+
+/* 前へ次への矢印カスタマイズ */
+.swiper-button-prev,
+.swiper-button-next {
+    width: rem(50);
+    height: rem(50);
+    top: var(--swiper-navigation-top-offset,55%);
+    @include mq(md) {
+        width: rem(66);
+        height: rem(66);
+        top: var(--swiper-navigation-top-offset,45%);
+    }
+}
+
+.swiper-button-prev{
+    left: var(--swiper-navigation-sides-offset, 0px);
+    @include mq(md) {
+        left: var(--swiper-navigation-sides-offset, 10px);
+    }
+}
+
+.swiper-button-next{
+    right: var(--swiper-navigation-sides-offset, 0px);
+    @include mq(md) {
+        right: var(--swiper-navigation-sides-offset, 10px);
+    }
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+	opacity: 0.5;
+}
+
+/* 前へ次への矢印カスタマイズ */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    width: rem(50);
+    height: rem(50);
+    margin: auto;
+    @include mq(md) {
+        width: rem(66);
+        height: rem(66);
+    }
+}
+
+
+/* 前への矢印カスタマイズ */
+.swiper-button-prev::after {
+    background-image: url(../images/common/swiper-left.webp);
+}
+/* 次への矢印カスタマイズ */
+.swiper-button-next::after {
+    background-image: url(../images/common/swiper-right.webp);
+}
+/* 画像サイズ調整 */
+.swiper-slide img {
+    height: auto;
+    width: 100%;
+}

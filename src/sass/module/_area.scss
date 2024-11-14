@@ -1,0 +1,130 @@
+@use "global" as *;
+
+.area{
+    background-color: #144F93;
+    @include mq(md) {
+        margin-top: rem(-164);
+    }
+}
+
+.area__bg{
+    background-image: url('../images/common/area-bg-sp.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: rem(518) rem(1200);
+    padding: rem(102) 0 rem(60);
+    @include mq(md) {
+        background-image: url('../images/common/area-bg.webp');
+        background-position: center calc(100% - -40px);
+        background-repeat: no-repeat;
+        background-size: rem(1200) rem(1020);
+        padding: rem(210) 0 rem(80);
+    }
+}
+
+.area__inner{
+    max-width: $max-width;
+    margin: auto;
+    padding: 0 rem(25);
+    @include mq(md) {
+        max-width: rem(930);
+        padding: 0 rem(25);
+    }
+}
+
+
+.area__head-img{
+    width: rem(492);
+    height: rem(33);
+    margin: 0 auto;
+    @include mq(md) {
+        width: rem(492);
+        height: rem(46);    
+    }
+}
+
+.area__title{
+    color: $white;
+    margin: rem(5) 0 rem(15);
+    font-size: rem(32.98);
+    font-weight: 900;
+    line-height: 1;
+    @include mq(md) {
+        margin: rem(5) 0 rem(20);
+        font-size: rem(48);
+    }
+}
+
+.area__title span {
+    color: #F3F02F;
+}
+
+.area__bottom-img{
+    width: rem(492);
+    height: rem(17);
+    margin: 0 auto;
+}
+
+.area__img{
+    margin: rem(30) auto 0;
+    @include mq(md) {
+        margin: rem(22.6) auto 0;
+    }
+}
+
+.area__img{
+    width: rem(340);
+    height: rem(202);
+    @include mq(md) {
+        width: rem(464);
+        height: rem(275);
+    }
+}
+
+.area__sentence{
+    text-align: left;
+    background-color: $white;
+    margin-top: rem(100);
+    padding: rem(30) rem(20) rem(50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    @include mq(md) {
+        margin-top: rem(35);
+        padding: rem(40) rem(102);
+    }
+}
+
+.area__sentence::before{
+    background-image: url('../images/common/area-comment-sp.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    content: "";
+    top: rem(-135);
+    right: calc(50% - min(50%, 9.5rem));
+    width: rem(297);
+    height: rem(152);
+    z-index: 1;
+    @include mq(md) {
+        background-image: url('../images/common/area-comment.webp');
+        top: rem(-108);
+        right: calc(50% - min(50%, 28rem));
+        width: rem(379);
+        height: rem(175);
+    }
+}
+
+.area__text{
+    color: #144F93;
+    font-size: rem(16);
+    font-weight: $bold;
+    line-height: calc(28/16);
+    letter-spacing: 0.04em;
+    @include mq(md) {
+        font-size: rem(18);
+        line-height: calc(32/18);
+    }
+}

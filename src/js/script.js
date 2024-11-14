@@ -38,7 +38,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
             centeredSlides: true,
             slidesPerView: "auto",
             spaceBetween: 20,
-            speed: 2000,
+            speed: 3000,
             loop: true,
             autoplay: {
                 delay: 0,
@@ -54,5 +54,20 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         });
         
         
+
+        const swiperTwo = new Swiper(".js-example-swiper", {
+            loop: true,
+            // ページネーション
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            // 前後の矢印
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+
+        });
         
 });
