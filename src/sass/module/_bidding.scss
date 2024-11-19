@@ -11,7 +11,7 @@
     position: relative;
     z-index: 1;
     @include mq(md) {
-        padding:rem(200) 0 rem(80);
+        padding:rem(168) 0 rem(80);
         background-image: url('../images/common/bidding-bg.webp');
         background-size: rem(1040) 100%;
     }

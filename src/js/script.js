@@ -32,20 +32,18 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         
 
 
-        // swiper(企業名)
-        var swiper = new Swiper(".js-features-swiper", {
+        var swiper = new Swiper(".js-frame-swiper", {
             allowTouchMove: false, 
             centeredSlides: true,
             slidesPerView: "auto",
             spaceBetween: 20,
-            speed: 3000,
-            loop: true,
+            speed: 4000, // スライドの移動速度を3秒に設定
+            loop: false, // 初期化時はループを無効化
             autoplay: {
-                delay: 0,
+                delay: 0, // 自動再生を開始する間隔を設定
                 disableOnInteraction: false,
-                reverseDirection: false // 左から右に流れるように設定
+                reverseDirection: false // 左から右に流れる設定
             },
-            loopAdditionalSlides: 1,
             breakpoints: {
                 768: {
                     spaceBetween: 30
@@ -53,6 +51,25 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
             },
         });
         
+
+        var swiperThird = new Swiper(".js-features-swiper", {
+            allowTouchMove: false, 
+            centeredSlides: true,
+            slidesPerView: "auto",
+            spaceBetween: 20,
+            speed: 4000, // スライドの移動速度を3秒に設定
+            loop: false, // 初期化時はループを無効化
+            autoplay: {
+                delay: 0, // 自動再生を開始する間隔を設定
+                disableOnInteraction: false,
+                reverseDirection: false // 左から右に流れる設定
+            },
+            breakpoints: {
+                768: {
+                    spaceBetween: 30
+                }
+            },
+        });
         
 
         const swiperTwo = new Swiper(".js-example-swiper", {
