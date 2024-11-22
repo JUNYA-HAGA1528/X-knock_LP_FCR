@@ -8,7 +8,11 @@
 
 .subsidy-sp__bg{
     position: relative;
-    padding-top: rem(25);
+    padding-bottom: rem(17);
+    @include mq(md) {
+        padding-top: rem(25);
+        padding-bottom: rem(17);
+    }
 }
 
 .subsidy-sp__bg::before{

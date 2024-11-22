@@ -31,27 +31,30 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         });
         
 
-
-        var swiper = new Swiper(".js-frame-swiper", {
-            allowTouchMove: false, 
+        // スワイパー(企業一覧)
+        var swiperCompany = new Swiper(".js-frame-swiper", {
+            allowTouchMove: false,
             centeredSlides: true,
             slidesPerView: "auto",
             spaceBetween: 20,
-            speed: 4000, // スライドの移動速度を3秒に設定
-            loop: false, // 初期化時はループを無効化
+            speed: 3000,
+            loop: true, // ループを有効化
             autoplay: {
-                delay: 0, // 自動再生を開始する間隔を設定
+                delay: 0, // 2秒間最初のスライドを表示
                 disableOnInteraction: false,
-                reverseDirection: false // 左から右に流れる設定
+                reverseDirection: false,
             },
             breakpoints: {
                 768: {
-                    spaceBetween: 30
-                }
+                    spaceBetween: 70,
+                },
             },
         });
         
+        
+        
 
+        // スワイパー(口コミ)
         var swiperThird = new Swiper(".js-features-swiper", {
             allowTouchMove: false, 
             centeredSlides: true,
@@ -72,6 +75,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         });
         
 
+        // スワイパー(評価)
         const swiperTwo = new Swiper(".js-example-swiper", {
             loop: true,
             // ページネーション

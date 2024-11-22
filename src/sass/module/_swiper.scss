@@ -13,9 +13,12 @@
 	align-items: center;
 }
 
-.swiper__img{
-	width: rem(85);
-    height: 100%;
+.swiper__img {
+    width: rem(177); /* 必要に応じて指定 */
+    height: 100%; /* 高さを統一 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -32,6 +35,10 @@
 .swiper-review__img{
 	width: rem(204);
     height: rem(156);
+	@include mq(md) {
+		width: rem(204);
+		height: rem(156);
+	}
 }
 
 .swiper-review__img img {

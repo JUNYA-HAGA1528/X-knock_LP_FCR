@@ -1,10 +1,22 @@
 @use "global" as *;
 
 
-
+.frame{
+    margin-top: rem(30);
+    @include mq(md) {
+        margin-top: rem(0);
+    }
+}
 
 .frame__text{
     padding: rem(10) 0 0 0;
     font-size: rem(16);
-    font-weight: 900;   
+    font-weight: 900; 
+}
+
+.frame__slider{
+    padding: rem(20) 0 rem(30);
+    @include mq(md) {
+        padding: 0;
+    }
 }
