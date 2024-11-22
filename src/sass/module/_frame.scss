@@ -9,9 +9,16 @@
 }
 
 .frame__text{
-    padding: rem(10) 0 0 0;
-    font-size: rem(16);
-    font-weight: 900; 
+    padding: rem(10) 0 rem(5);
+}
+
+.frame__text img {
+    width: rem(186);
+    height: rem(17);
+    margin: 0 auto;
+    @include mq(md) {
+        width: rem(203);
+    }
 }
 
 .frame__slider{

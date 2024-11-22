@@ -24,7 +24,7 @@
 .fv-sp__inner{
     max-width: $max-width;
     margin: auto;
-    padding-left: rem(20);
+    padding-left: rem(18.25);
     position: relative;
 }
 
@@ -49,35 +49,27 @@
 }
 
 .fv-sp__sun{
-    width: rem(369.98);
-    height: rem(93.59);
+    width: rem(354.75);
+    height: rem(220.96);
     margin-top: rem(-15);
 }
 
 .fv-sp__title{
     width: rem(298);
     height: rem(78);
-    margin-top: rem(7.4);
-    padding-left: rem(5);
-}
-
-.fv-sp__table{
-    width: rem(338);
-    height: rem(249);
-    margin-top: rem(10.4);
-    padding-left: rem(5);
+    margin-top: rem(-10);
 }
 
 .fv-sp__list{
-    margin-top: rem(10);
+    margin-top: rem(30);
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0 rem(9);
+    gap: 0 rem(8);
     position: relative;
 }
 
 .fv-sp__item img {
-    width: rem(90);
-    height: rem(90);
+    width: rem(117);
+    height: rem(117);
 }

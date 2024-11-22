@@ -127,29 +127,24 @@
                             <img src="./assets/images/common/fv-head.webp" alt="東京都にお住まいのかた必見！">
                         </figure>
                         <div class="fv-pc__container">
-                            <img class="fv-human" src="./assets/images/common/fv-human.webp" alt="" loading="lazy">
-                            <div class="fv-pc__bg">
-                                <div class="fv-pc__inner">
-                                    <img class="fv-pc__price" src="./assets/images/common/fv-price.webp" alt="話題！補助金300万円超えの実績あり！！" loading="lazy">
-                                    <img class="fv-pc__sun" src="./assets/images/common/fv-sun.webp" alt="太陽光発電 蓄電池" loading="lazy">
-                                    <h2 class="fv-pc__title">
-                                        <img src="./assets/images/common/fv-title.webp" alt="トナベンエナジーにお任せください！！" loading="lazy">
-                                    </h2>
-                                    <ul class="fv-pc__list">
-                                        <li class="fv-pc__item">
-                                            <img src="./assets/images/common/fv-icon1.webp" alt="太陽光 蓄電池 施工実績No1" loading="lazy">
-                                        </li>
-                                        <li class="fv-pc__item">
-                                            <img src="./assets/images/common/fv-icon2.webp" alt="関東で16店舗のグループ会社で安心" loading="lazy">
-                                        </li>
-                                        <li class="fv-pc__item">
-                                            <img src="./assets/images/common/fv-icon3.webp" alt="補助金成功率94％" loading="lazy">
-                                        </li>
-                                        <li class="fv-pc__item">
-                                            <img src="./assets/images/common/fv-icon4.webp" alt="業界最高の20年保証" loading="lazy">
-                                        </li>
-                                    </ul>
-                                </div>
+                            <div class="fv-pc__inner">
+                                <img class="fv-human" src="./assets/images/common/fv-human.webp" alt="" loading="lazy">
+                                <img class="fv-pc__price" src="./assets/images/common/fv-price.webp" alt="話題！補助金300万円超えの実績あり！！" loading="lazy">
+                                <img class="fv-pc__sun" src="./assets/images/common/fv-sun.webp" alt="太陽光発電 蓄電池" loading="lazy">
+                                <h2 class="fv-pc__title">
+                                    <img src="./assets/images/common/fv-title.webp" alt="トナベンエナジーにお任せください！！" loading="lazy">
+                                </h2>
+                                <ul class="fv-pc__list">
+                                    <li class="fv-pc__item">
+                                        <img src="./assets/images/common/fv-icon2.webp" alt="関東で16店舗のグループ会社で安心" loading="lazy">
+                                    </li>
+                                    <li class="fv-pc__item">
+                                        <img src="./assets/images/common/fv-icon3.webp" alt="補助金成功率94％" loading="lazy">
+                                    </li>
+                                    <li class="fv-pc__item">
+                                        <img src="./assets/images/common/fv-icon4.webp" alt="業界最高の20年保証" loading="lazy">
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -163,14 +158,10 @@
                                 <img class="fv-sp__price" src="./assets/images/common/fv-price-sp.webp" alt="話題！補助金300万円超えの実績あり！！" loading="lazy">
                                 <img class="fv-sp__sun" src="./assets/images/common/fv-sun-sp.webp" alt="太陽光発電 蓄電池の導入なら" loading="lazy">
                                 <h2 class="fv-sp__title">
-                                    <img src="./assets/images/common/fv-title.webp" alt="トナベンエナジーにお任せください！！" loading="lazy">
+                                    <img src="./assets/images/common/fv-title-sp.webp" alt="トナベンエナジーにお任せください！！" loading="lazy">
                                 </h2>
-                                <img class="fv-sp__table" src="./assets/images/common/fv-table-sp.webp" alt="太陽光と蓄電池を使った際の金額比較" loading="lazy">
                             </div>
                             <ul class="fv-sp__list">
-                                <li class="fv-sp__item">
-                                    <img src="./assets/images/common/fv-icon1.webp" alt="太陽光 蓄電池 施工実績No1" loading="lazy">
-                                </li>
                                 <li class="fv-sp__item">
                                     <img src="./assets/images/common/fv-icon2.webp" alt="関東で16店舗のグループ会社で安心" loading="lazy">
                                 </li>
@@ -191,7 +182,9 @@
                 自動スライダー
                 -------------------------->
                 <div class="main__frame frame">
-                    <p class="frame__text">業界屈指の取り扱いメーカー</p>
+                    <div class="frame__text">
+                        <img src="./assets/images/common/frame-text.png" alt="" loading="lazy">
+                    </div>
                     <div class="frame__slider swiper js-frame-swiper">
                         <div class="swiper__items swiper-wrapper">
 
@@ -676,7 +669,10 @@
 
                         <ul class="case__list">
                             <li class="case__item">
-                                <img class="case__head" src="./assets/images/common/case-head1.png" alt="事例1" loading="lazy">
+                                <picture loading="lazy">
+                                    <source class="case__head" srcset="./assets/images/common/case-head1.png" media="(min-width: 768px)">
+                                    <img src="./assets/images/common/case-head1-sp.png" alt="事例1" loading="lazy">
+                                </picture>
                                 <figure class="case__img">
                                     <img src="./assets/images/common/case1.webp" alt="暗い背景にスーツを着て腕を組む男性の一部の姿勢">
                                 </figure>
@@ -686,7 +682,10 @@
                                 </p>
                             </li>
                             <li class="case__item">
-                                <img class="case__head" src="./assets/images/common/case-head2.png" alt="事例2" loading="lazy">
+                                <picture loading="lazy">
+                                    <source class="case__head" srcset="./assets/images/common/case-head2.png" media="(min-width: 768px)">
+                                    <img src="./assets/images/common/case-head2-sp.png" alt="事例2" loading="lazy">
+                                </picture>
                                 <figure class="case__img">
                                     <img src="./assets/images/common/case2.webp" alt="ビジネススーツを着た二人が資料を見ながら話し合っている様子">
                                 </figure>
@@ -696,7 +695,10 @@
                                 </p>
                             </li>
                             <li class="case__item">
-                                <img class="case__head" src="./assets/images/common/case-head3.png" alt="事例3" loading="lazy">
+                                <picture loading="lazy">
+                                    <source class="case__head" srcset="./assets/images/common/case-head3.png" media="(min-width: 768px)">
+                                    <img src="./assets/images/common/case-head3-sp.png" alt="事例3" loading="lazy">
+                                </picture>
                                 <figure class="case__img">
                                     <img src="./assets/images/common/case3.webp" alt="キッチンでノートパソコンを前に悩む女性と、それを心配そうに見守る男性">
                                 </figure>

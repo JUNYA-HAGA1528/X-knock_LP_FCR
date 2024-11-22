@@ -1,27 +1,37 @@
 @use "global" as *;
 
 
+
+
 .fv-pc__container{
     position: relative;
-    max-width: rem(1220);
-    margin: 0 auto;
+    background-image: url('../images/common/fv-bg.png');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: rem(33.6);
+    margin-top: -3.25%;
 }
 
-
+.fv-pc__head{
+    position: relative;
+    z-index: 100;
+    object-fit: contain;
+}
 
 .fv-human{
     position: absolute;
     right: 0;
-    top: -9.1%;
-    width: rem(324);
-    height: rem(702);
-    z-index: 1;
+    top: 25%;
+    width: rem(449);
+    height: rem(514);
+    z-index: -1;
 }
 
 .fv-pc__inner{
-    max-width: rem(1020);
+    max-width: rem(1060);
+    padding: rem(13) rem(10) 0 rem(30);
     margin: 0 auto;
-    padding: 0 rem(10);
     position: relative;
     z-index: 100;
 }
@@ -40,11 +50,7 @@
     z-index: 9999;
 }
 
-
-
-
 .fv-pc__price{
-    margin-top: rem(-30);
     width: rem(882);
     height: rem(181);
 }
@@ -70,10 +76,10 @@
     background-size: contain;
     position: absolute;
     content: "";
-    top: rem(-50);
-    right: calc(50% - min(50%, 15rem));
-    width: rem(183);
-    height: rem(63);
+    top: rem(-170);
+    right: calc(50% - min(50%, 6.5rem));
+    width: 19%;
+    height: 114%;
     z-index: 9999;
 }
 
@@ -82,21 +88,15 @@
     height: rem(135);
 }
 
-.fv-pc__content{
-    display: flex;
-    align-items: end;
-    gap: 0 rem(103);
-}
-
 .fv-pc__list{
-    margin-top: rem(27.87);
-    padding-left: rem(5);
     display: flex;
     align-items: center;
-    gap: 0 rem(24.27);
+    justify-content: flex-end;
+    margin-top: rem(-110);
+    gap: 0 rem(10);
 }
 
 .fv-pc__item{
-    width: rem(133);
-    height: rem(133);
+    width: 17%;
+    height: 7%;
 }
