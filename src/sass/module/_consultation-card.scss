@@ -32,10 +32,10 @@
 
 .consultation-card__border{
     width: rem(55.58);
-    border-bottom: solid 1.16px #00C6FF;
+    border-bottom: solid 1.16px #457EBF;
     @include mq(md) {
         width: rem(42.52);
-        border-bottom: solid 0.88px #00C6FF;
+        border-bottom: solid 0.88px #457EBF;
     }
 }
 

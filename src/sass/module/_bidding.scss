@@ -62,7 +62,12 @@
     }
 }
 
-
+.bidding__hint{
+    margin-top: rem(21);
+    color: #444;
+    font-size: rem(16);
+    font-weight: $medium;
+}
 
 .bidding__sentence{
     background-color:rgba(0, 198, 255, 0.1);
@@ -161,3 +166,7 @@
         margin-top: rem(0);
     }
 }
+
+
+
+
