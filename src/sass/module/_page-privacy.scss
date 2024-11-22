@@ -1,0 +1,68 @@
+@use "global" as *;
+
+
+.page-privacy{
+	margin: 100px 0 108px;
+}
+
+.page-privacy__inner{
+	max-width: 1069px;
+	margin: 0 auto;
+	padding: 0 25px;
+}
+
+.page-privacy__title{
+	text-align: center;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background: linear-gradient(90deg, #3ACADD 0%, #5A88E5 100%);
+	background-clip: text; /* 一部のブラウザで必要 */
+	color: transparent; /* 他のブラウザでもテキストの透明化を確実にするため */
+	font-size: 2rem;
+	font-weight: 700;
+}
+
+.page-privacy__container{
+	margin-top: 80px;
+	font-family: yu-gothic-pr6n, sans-serif;
+}
+
+.page-privacy__head-title{
+	font-weight: 700;	
+	font-size: 18px;
+}
+
+.page-privacy__head-text{
+	font-weight: 500;
+	font-size: 18px;
+}
+
+.page-privacy__list{
+	margin-top: 30px;
+}
+
+.page-privacy__item + .page-privacy__item{
+	margin-top: 50px;
+}
+
+.page-privacy__item-title{
+	font-size: 24px;
+	font-weight: 700;
+}
+
+.page-privacy__sentence{
+	margin-top: 20px;
+}
+
+.page-privacy__item-text{
+	font-size: 18px;
+	font-weight: 500;
+}
+
+.page-privacy__data{
+	font-family: yu-gothic-pr6n, sans-serif;
+	margin-top: 30px;
+	font-size: 18px;
+	font-weight: 500;
+}
+

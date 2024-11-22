@@ -59,7 +59,7 @@
 .consultation-card__text{
     position: relative;
     z-index: 10;
-    margin-top: rem(29.27);
+    margin-top: rem(10);
     font-size: rem(20.84);
     font-weight: $bold;
     @include mq(md) {
@@ -77,7 +77,7 @@
 }
 
 .consultation-card__text--margin{
-    margin-top: rem(29.27);
+    margin-top: rem(10);
     @include mq(md) {
         margin-top: rem(-10);
     }

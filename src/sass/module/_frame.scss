@@ -2,7 +2,7 @@
 
 
 .frame{
-    margin-top: rem(30);
+    margin-top: rem(20);
     @include mq(md) {
         margin-top: rem(0);
     }
@@ -13,7 +13,7 @@
 }
 
 .frame__text img {
-    width: rem(186);
+    width: rem(196);
     height: rem(17);
     margin: 0 auto;
     @include mq(md) {

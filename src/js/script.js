@@ -61,7 +61,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
             slidesPerView: "auto",
             spaceBetween: 20,
             speed: 4000, // スライドの移動速度を3秒に設定
-            loop: false, // 初期化時はループを無効化
+            loop: true, // 初期化時はループを無効化
             autoplay: {
                 delay: 0, // 自動再生を開始する間隔を設定
                 disableOnInteraction: false,
@@ -93,7 +93,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         
 
 
-        
+        // CTA
         document.addEventListener("scroll", function () {
             const fv = document.querySelector(".fv");
             const ctaButtons = document.querySelector(".cta__buttons");
@@ -119,6 +119,6 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         });
 
 
-
+        // スクロールヒント
         new ScrollHint(".js-scroll");
 });

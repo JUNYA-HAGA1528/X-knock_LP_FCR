@@ -1,5 +1,7 @@
 @use "global" as *;
 
+
+
 .contact__container {
     position: sticky;
     top: 0px; /* 画面上部からの距離 */
@@ -20,7 +22,7 @@
 .contact__wrapper--padding{
     max-width: $max-width;
     margin: 0 auto;
-    padding: rem(40) rem(35) rem(80);
+    padding: rem(62) rem(35) rem(60);
 }
 
 .contact__box{
@@ -29,14 +31,50 @@
     background-repeat: no-repeat;
     background-size: rem(235) rem(140);
     background-color: $white;
-    padding: rem(20) 0 rem(30);
+    padding: rem(20) 0 rem(35);
+    @include mq(md) {
+        padding: rem(20) 0 rem(30);
+    }
 }
 
 .contact__head{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0 rem(10);
+    gap: 0 rem(14);
+    text-align: center;
+    @include mq(md) {
+        display: inline-block;
+        background-color: #EEFAFF;
+        border: solid 1px $white;
+        padding: rem(16) rem(16) rem(16) rem(25);
+        
+    }
+}
+
+.contact__head-text{
+    color: #00C6FF;
+    font-size: rem(24);
+    font-weight: 900;
+    line-height: calc(28/24);
+}
+
+.contact__head-span{
+    font-family: $second-font;
+    color: #0191FF;
+    font-size: rem(33);
+    font-weight: $bold;
+}
+
+.contact__head-span-color{
+    color: #0191FF;
+    font-weight: $bold;
+}
+
+@media (max-width: 1300px) {
+    .contact__br{
+        display: none;
+    }
 }
 
 .contact__title{
@@ -45,36 +83,90 @@
     font-weight: 900;
 }
 
-.contact__border{
-    width: 22%;
-    border-bottom: solid 1px #00C6FF;
+.contact__border {
+	border-bottom: solid 1px #00C6FF;
+	width: 16.5%;
+}
+
+.contact__sentence{
+    text-align: left;
+    margin-top: rem(9.91);
+    padding-left: rem(20);
+}
+
+.contact__subtitle{
+    color: #000;
+    font-size: rem(16);
+    font-weight: $medium;
+}
+
+.contact__text{
+    margin-top: rem(7);
+    color: #000;
+    font-size: rem(13);
+    font-weight: $regular;
 }
 
 .contact__form{
-    max-width: rem(300);
-    margin: rem(10) auto 0;
-    padding: 0 rem(10);
+    margin-top: rem(11.05);
+    padding: 0 rem(20);
 }
 
 .contact__frame--padding{
     padding: rem(20) 0 0 0;
 }
 
+.contact__phone{
+    margin-top: rem(20);
+}
 
+.contact__phone--margin{
+    margin-top: rem(40);
+    @include mq(md) {
+        margin-top: rem(0);
+    }
+}
 
+.btn-submit__body {
+    position: relative;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    cursor: pointer; /* カーソルをポインターに変更 */
+    @include mq(md) {
+        max-width: 18.75rem;
 
+    }
+}
 
+.btn-submit__body::before {
+    background-image: url('../images/common/button.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    content: "";
+    top: -35%;
+    width: 100%;
+    height: 175%;
+    z-index: -1;
+    transition: transform 0.3s ease; /* トランジションを追加 */
+}
 
+.btn-submit__body:hover::before {
+    transform: scale(1.1); /* マウスオーバーで画像を拡大 */
+    pointer-events: none; /* クリックなどのイベントを防止 */
+}
 
 
 
 
 .btn__top{
-    margin-top: 2.5rem;
+    margin-top: rem(40);
     text-align: center;
-    @include mq(md){
-        margin-top: rem(60);
-    }
 }
     
 .btn-submit {
@@ -82,89 +174,13 @@
 }
     
 .btn-submit__body[type="submit"] {
-    font-family: $third-font;
     position: relative;
-    display: inline-block;
-    text-align: center;
-    width: rem(204);
-    padding: rem(10) 0;
-    color: white;
-    font-size: rem(14.71); 
-    font-weight: $bold;
-    transition: color 0.2s;
     z-index: 1;
-    letter-spacing: 0.1em;
-    border-radius: rem(45);
-
+    padding: rem(20);
     cursor: pointer;
     @include mq(md){
-        font-size: rem(15.44); 
         width: 100%;
-        padding: rem(15.3) 0;
+        padding: rem(20);
     }
 }
     
-.btn-submit:hover::after {
-    @include mq("md") {
-        transform: scale(1, 1);
-        pointer-events: none;
-    }
-}
-
-// .btn-submit__text {
-//     font-family: $third-font;
-//     position: absolute;
-//     display: inline-block;
-//     top: 27%;
-//     left: 39%;
-//     color: $white;
-//     z-index: 2;
-//     font-size: rem(14.71); 
-//     @include mq(md){
-//         font-weight: $bold;
-//         font-size: rem(15.44); 
-//         top: 29%;
-//         left: 44%;
-//     }
-// }
-
-.btn-submit__text::after {
-    content: "";
-    position: absolute;
-    max-width: rem(40);
-    width: 100%;
-    height: 100%;
-    left: rem(205);
-    top: 32%;
-    background-image: url(../images/common/subbutton-arrow.webp);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-    pointer-events: none;
-    width: rem(15);
-    height: rem(15);
-    z-index: 100;
-    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1); /* ゆっくり加速して止まる動き */
-    @include mq(md){
-        top: 33%;
-
-        width: rem(16);
-        height: rem(16);
-    }
-}
-
-.btn-submit:hover .btn-submit__text::after {
-    transform: translateX(rem(5)); /* rem(5)の部分で移動量を調整 */
-}
-  
-  .btn-submit:hover .btn-submit__arrow::before,
-  .btn-submit:hover .btn-submit__arrow::after {
-    background-color: transparent;
-    pointer-events: none;
-  }
-  
-  .btn-submit__body[disabled] {
-    cursor: not-allowed;
-  }
-  
-
