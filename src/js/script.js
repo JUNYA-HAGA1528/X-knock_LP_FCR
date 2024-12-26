@@ -85,8 +85,8 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
             },
             // 前後の矢印
             navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
+                nextEl: ".example-next", // 固有のクラスを指定
+                prevEl: ".example-prev", // 固有のクラスを指定
             },
 
         });
@@ -121,4 +121,70 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
         // スクロールヒント
         new ScrollHint(".js-scroll");
+
+
+
+
+
+        const swiper = new Swiper(".all-swiper", {
+            centeredSlides: true, // 1枚目のスライドを中央にする
+            loop: true, // ループさせる
+            speed: 500, // 少しゆっくり(デフォルトは300)
+            slidesPerView: 3, // デフォルトは3枚表示
+            spaceBetween: 20, // スライド間のスペース
+            // ページネーション
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            // 前後の矢印
+            navigation: {
+                nextEl: ".review-next", // 固有のクラスを指定
+                prevEl: ".review-prev", // 固有のクラスを指定
+            },
+            // レスポンシブ設定
+            breakpoints: {
+                768: {
+                    slidesPerView: 3, // 768px以上は3枚表示
+                    spaceBetween: 20,
+                },
+                500: {
+                    slidesPerView: 2.5, // 500px以上は2.5枚表示
+                    spaceBetween: 10,
+                },
+                0: {
+                    slidesPerView: 1.5, // 500px以下は1.5枚表示
+                    spaceBetween: 5,
+                },
+            },
+            // スライド変更時と初期化時のクラス管理
+            on: {
+                init: function () {
+                    // 初期化時に中央スライドにクラスを付与
+                    const slides = this.slides;
+                    slides.forEach((slide, index) => {
+                        if (index === this.activeIndex) {
+                            slide.classList.add("review__content-slide-active");
+                        } else {
+                            slide.classList.remove("review__content-slide-active");
+                        }
+                    });
+                },
+                slideChangeTransitionStart: function () {
+                    // スライド変更時にクラスを更新
+                    const slides = this.slides;
+                    slides.forEach((slide, index) => {
+                        if (index === this.activeIndex) {
+                            slide.classList.add("review__content-slide-active");
+                        } else {
+                            slide.classList.remove("review__content-slide-active");
+                        }
+                    });
+                },
+            },
+        });
+        
+        
+        
+
 });

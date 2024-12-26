@@ -4,11 +4,14 @@
 
 .contact__container {
     position: sticky;
-    top: 0px; /* 画面上部からの距離 */
-    max-height: 100vh; /* 画面の80%に制限 */
-    overflow-x: auto; /* コンテンツがあふれた場合にスクロール可能に */
+    top: 0; /* 画面上部からの距離 */
+    height: 100vh; /* 画面の高さ全体を設定 */
+    overflow-y: auto; /* コンテンツが溢れた場合に縦スクロールを有効化 */
     padding: 0 20px;
+    display: flex; /* 必要に応じてコンテンツを中央揃え */
+    flex-direction: column; /* コンテンツを縦方向に整列 */
 }
+
 
 
 .contact__frame{
@@ -184,3 +187,32 @@
     }
 }
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
